@@ -4965,7 +4965,7 @@ break
 
 
 
-case 'Senpai':
+case 'senpai':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
 
