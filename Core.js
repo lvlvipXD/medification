@@ -355,91 +355,91 @@ const addCooldown = (userId) => {
 }
 
 var levelRole = getLevelingLevel(m.sender)
-        var role = 'Copper V'
+        var role = 'نحاسي 5'
         if (levelRole <= 5) {
-            role = 'Copper IV'
+            role = 'نحاسي 4'
         } else if (levelRole <= 10) {
-            role = 'Copper III'
+            role = 'نحاسي 3'
         } else if (levelRole <= 15) {
-            role = 'Copper II'
+            role = 'نحاسي 2'
         } else if (levelRole <= 20) {
-            role = 'Copper I'
+            role = 'نحاسي 1'
         } else if (levelRole <= 25) {
-            role = 'Silver V'
+            role = 'فضي 5'
         } else if (levelRole <= 30) {
-            role = 'Silver IV'
+            role = 'فضي 4'
         } else if (levelRole <= 35) {
-            role = 'Silver III'
+            role = 'فضي 3'
         } else if (levelRole <= 40) {
-            role = 'Silver II'
+            role = 'فضي 2'
         } else if (levelRole <= 45) {
-            role = 'Silver I'
+            role = 'فضي 1'
         } else if (levelRole <= 50) {
-            role = 'Gold V'
+            role = 'ذهبي 5'
         } else if (levelRole <= 55) {
-            role = 'Gold IV'
+            role = 'ذهبي 4'
         } else if (levelRole <= 60) {
-            role = 'Gold III'
+            role = 'ذهبي 3'
         } else if (levelRole <= 65) {
-            role = 'Gold II'
+            role = 'ذهبي 2'
         } else if (levelRole <= 70) {
-            role = 'Gold I'
+            role = 'ذهبي 1'
         } else if (levelRole <= 75) {
-            role = 'Platinum V'
+            role = 'بلاتينيوم 5'
         } else if (levelRole <= 80) {
-            role = 'Platinum IV'
+            role = 'بلاتينيوم 4'
         } else if (levelRole <= 85) {
-            role = 'Platinum III'
+            role = 'بلاتينيوم 3'
         } else if (levelRole <= 90) {
-            role = 'Platinum II'
+            role = 'بلاتينيوم 2'
         } else if (levelRole <= 95) {
-            role = 'Platinum I'
+            role = 'بلاتينيوم 1'
         } else if (levelRole < 100) {
-            role = 'Exterminator'
+            role = 'قاهرهم'
         }
 
         var levelRoles = getLevelingLevel(m.sender)
-        var roles = 'Cop V'
+        var roles = 'نحاس 5'
         if (levelRoles <= 5) {
-            roles = 'Cop IV'
+            roles = 'نحاس 4'
         } else if (levelRoles <= 10) {
-            roles = 'Cop III'
+            roles = 'نحاس 3'
         } else if (levelRoles <= 15) {
-            roles = 'Cop II'
+            roles = 'نحاس 2'
         } else if (levelRoles <= 20) {
-            roles = 'Cop I'
+            roles = 'نحاس 1'
         } else if (levelRoles <= 25) {
-            roles = 'Sil V'
+            roles = 'فضة V'
         } else if (levelRoles <= 30) {
-            roles = 'Sil IV'
+            roles = 'فضه IV'
         } else if (levelRoles <= 35) {
-            roles = 'Sil III'
+            roles = 'فضه III'
         } else if (levelRoles <= 40) {
-            roles = 'Sil II'
+            roles = 'فضه II'
         } else if (levelRoles <= 45) {
-            roles = 'Sil I'
+            roles = 'فضه I'
         } else if (levelRoles <= 50) {
-            roles = 'Gol V'
+            roles = 'ذهب V'
         } else if (levelRoles <= 55) {
-            roles = 'Gol IV'
+            roles = 'ذهب IV'
         } else if (levelRoles <= 60) {
-            roles = 'Gol III'
+            roles = 'ذهب III'
         } else if (levelRoles <= 65) {
-            roles = 'Gol II'
+            roles = 'ذهب II'
         } else if (levelRoles <= 70) {
-            roles = 'Gol I'
+            roles = 'ذهب I'
         } else if (levelRoles <= 75) {
-            roles = 'Plat V'
+            roles = 'بلاتينيوم V'
         } else if (levelRoles <= 80) {
-            roles = 'Plat IV'
+            roles = 'بلاتين IV'
         } else if (levelRoles <= 85) {
-            roles = 'Plat III'
+            roles = 'بلاتينيوم III'
         } else if (levelRoles <= 90) {
-            roles = 'Plat II'
+            roles = 'بلاتينيوم II'
         } else if (levelRoles <= 95) {
-            roles = 'Plati I'
+            roles = 'بلاتينيوم I'
         } else if (levelRoles < 100) {
-            roles = 'Exter'
+            roles = 'اكسترا'
         }
    
                         if (m.isGroup && isLeveling && isUser && Miku.public) {
@@ -1428,7 +1428,7 @@ case 'me': case 'بروفايل': case 'p':
       pfp ='https://wallpapercave.com/wp/wp10524580.jpg'
     }
 
-     const profilexx = `*「  Profile Info  」*\n\n*User Name* : ${pushname}\n*Bio* : ${bioo}\n*Group Admin Status* : ${adn}\n*Level* : ${levelMenu}\n*Exp* : ${xpMenu} out of ${reqXp}\n*Role* : ${role}`
+     const profilexx = `*「  معلوماتك  」*\n\n*اليوزر* : ${pushname}\n*البايو* : ${bioo}\n*حالة اشرافك* : ${adn}\n*المستوى* : ${levelMenu}\n*نقاطك* : ${xpMenu} من ${reqXp}\n*رانك* : ${role}`
  
 
 
@@ -1500,7 +1500,7 @@ case 'تفاااعلاتتتتتتتتتتتت' :
         break   
     
 
-case 'limituser': case 'userlimit': case 'limit':
+case 'limitusبيبيبer': case 'userيبسيبسيببيبlimit': case 'liيبيبmit':
             if (isBan) return reply(mess.banned)	 			
             if (isBanChat) return reply(mess.bangc)
             {      
@@ -1547,7 +1547,7 @@ case 'خلفية': {
 if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
 if (!args.join(" ")) return reply("اكتب نوع الخلفية")
-const { AnimeWallpaper } =require("خلفية انمي")
+const { AnimeWallpaper } =require("anime-wallpaper")
 const wall = new AnimeWallpaper();
 const pages = [1,2];
 const random=pages[Math.floor(Math.random() * pages.length)]
@@ -1590,7 +1590,7 @@ if (isBanChat) return reply(mess.bangc)
     }
     break
 
-case 'quotesimagexxx': case 'qoutesimagexxx': case 'quoteimage':
+case 'quotesidfdsfmagexxx': case 'qoutesimagsdfsdfexxx': case 'quotedfsdfimage':
 if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
 				   let cok = await fetchJson(`http://api.lolhuman.xyz/api/random/quotesimage?apikey=${lolkey}`)
@@ -1598,7 +1598,7 @@ if (isBanChat) return reply(mess.bangc)
 				  Miku.sendMessage(m.chat, { image: { url: cok }, caption: 'Here it is...' }, { quoted: m })
 				  break
 
-case 'quotesanime': case 'quoteanime': case 'animequote': case 'animequotes':{
+case 'quotessdfsdfanime': case 'quodfdfteanime': case 'animeqdfdfuote': case 'animccfdsfdequotes':{
 		let { quotesAnime } = require('./lib/scraper')
         let anu = await quotesAnime()
         hasil = anu[Math.floor(Math.random() * anu.length)]
@@ -1616,7 +1616,7 @@ case 'quotesanime': case 'quoteanime': case 'animequote': case 'animequotes':{
     break
 
 
-case 'animestory': { 
+case 'andfsdfsfimestory': { 
 	if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
 reply(mess.waiting)
@@ -1651,8 +1651,8 @@ let sections = []
   break
 
 
-  case 'grupsetting':
-    case 'groupsetting':{
+  case 'grupsdfdfdfetting':
+    case 'grodfdfsdfupsetting':{
         if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
             let sections = []
@@ -1703,7 +1703,7 @@ case 'animesearchxxx': case 'anime':{
     break
 */
 
-case 'coffee': case 'kopi': {
+case 'cofdfdfdffee': case 'kodfdfdfdfi': {
         if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
                 let buttons = [
@@ -1735,7 +1735,7 @@ await fs.unlinkSync(encmedia)
 }
 break
 
-case 'getcase':
+case 'getcadsfsdfse':
    if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
 if (m.isGroup) reply(mess.privateonly)
@@ -1791,7 +1791,7 @@ await Miku.sendMessage(m.chat, { delete: key })
 
 
 
- case 'listpc': {
+ case 'listdfsdfpc': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  let anu = await store.chats.all().filter(v => v.id.endsWith('.net')).map(v => v)
@@ -1803,7 +1803,7 @@ await Miku.sendMessage(m.chat, { delete: key })
  }
  break
 
- case 'listgc': {
+ case 'lisdfdftgc': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  let anu = await store.chats.all().filter(v => v.id.endsWith('@g.us')).map(v => v.id)
@@ -1842,7 +1842,7 @@ await Miku.sendMessage(m.chat, { delete: key })
  }
  break
 
- case 'toletter': {
+ case 'toletsdfsdfsdfter': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!Number(args[0])) return replay(`Example:\n${prefix}toletter 956`)
@@ -1855,7 +1855,7 @@ await Miku.sendMessage(m.chat, { delete: key })
  }
  }
 
-   case 'leveling':
+   case 'levelingsdsdqsdqs':
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!m.isGroup) return replay(mess.grouponly)
@@ -1907,7 +1907,7 @@ await Miku.sendMessage(m.chat, { delete: key })
    break
 
 
-   case 'antilinkyoutubevideo': case 'antilinkyoutubevid': case 'antilinkytvid': {
+   case 'antilinkyoutubevideodsqdqsd': case 'antilinkyoutubevidsdfsdfsdf': case 'antilinkytviddfsdf': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!m.isGroup) return replay(mess.grouponly)
@@ -1941,7 +1941,7 @@ await Miku.sendMessage(m.chat, { delete: key })
 
 
 
-     case 'antilinkyoutubech': case 'antilinkyoutubechannel': case 'antilinkytch': {
+     case 'antilinkyoutubechsdfsdf': case 'antilinkyoutubechannelsdfsdf': case 'antilinkytchdfsdfs': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!m.isGroup) return replay(mess.grouponly)
@@ -1974,7 +1974,7 @@ await Miku.sendMessage(m.chat, { delete: key })
    break
 
 
-   case 'antilinkinstagram': case 'antilinkig': case 'antilinkinsta': {
+   case 'antilinkinstagramdsfsdf': case 'antilinkigsdfsdf': case 'antilinkinstadfsdfsdf': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!m.isGroup) return replay(mess.grouponly)
@@ -2006,7 +2006,7 @@ await Miku.sendMessage(m.chat, { delete: key })
    }
    break
 
-   case 'antilinkfacebook': case 'antilinkfb': {
+   case 'antilinkfacebookdsfsdf': case 'antilinkfbdsfsdf': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!m.isGroup) return replay(mess.grouponly)
@@ -2039,7 +2039,7 @@ await Miku.sendMessage(m.chat, { delete: key })
    break
 
 
-   case 'antilinktelegram': case 'antilinktg': {
+   case 'antilinktelegramdsfdf': case 'antilinktgsdfsdf': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!m.isGroup) return replay(mess.grouponly)
@@ -2072,7 +2072,7 @@ await Miku.sendMessage(m.chat, { delete: key })
    break
 
 
-   case 'antilinktiktok': case 'antilinktt': {
+   case 'antilinktiktokdsfsdf': case 'antilinkttdfdf': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!m.isGroup) return replay(mess.grouponly)
@@ -2104,7 +2104,7 @@ await Miku.sendMessage(m.chat, { delete: key })
    }
    break
 
-   case 'antilinktwt': case 'antilinktwitter': case 'antilinktwit': {
+   case 'antilinktwtdfdf': case 'antilinktwittercfdfdf': case 'antilinktwitfdfdf': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!m.isGroup) return replay(mess.grouponly)
@@ -2137,7 +2137,7 @@ await Miku.sendMessage(m.chat, { delete: key })
    break
 
 
-   case 'antilinkall': {
+   case 'antilinkallcvvvvvv': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!m.isGroup) return replay(mess.grouponly)
@@ -2170,7 +2170,7 @@ await Miku.sendMessage(m.chat, { delete: key })
    break
 
 
-   case 'antiwame': {
+   case 'antiwameeee': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!m.isGroup) return replay(mess.grouponly)
@@ -2267,6 +2267,7 @@ case 'المتصلين': case 'listaktif': case 'here':{
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!m.isGroup) return replay(mess.grouponly)
+ if (!isCreator) return replay(mess.botowner)
  let id = args && /\d+\-\d+@g.us/.test(args[0]) ? args[0] : m.chat
  let online = [...Object.keys(store.presences[id]), botNumber]
  let liston = 1
@@ -2301,7 +2302,7 @@ replay("Error")
 break
 
 
-case 'happymod': {
+case 'happymodsddddd': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!args.join(" ")) return replay(`Example : ${prefix + command} Kinemaster`)
@@ -2698,7 +2699,7 @@ let mentioned = participants.map(v => v.jid)
      }
      break
 
-     case 'tempo': {
+     case 'tempoooo': {
         if (isBan) return reply(mess.banned)
         if (isBanChat) return reply(mess.bangc)
         if (!args.join(" ")) return reply(`Example: ${prefix + command} 10`)
@@ -2728,37 +2729,37 @@ let mentioned = participants.map(v => v.jid)
         }
         break
 
-        case 'bass': case 'blown': case 'deep': case 'earrape': case 'fast': case 'fat': case 'nightcore': case 'reverse': case 'robot': case 'slow': case 'smooth': case 'tupai':
-            try {
-            let set
-            if (/bass/.test(command)) set = '-af equalizer=f=54:width_type=o:width=2:g=20'
-            if (/blown/.test(command)) set = '-af acrusher=.1:1:64:0:log'
-            if (/deep/.test(command)) set = '-af atempo=4/4,asetrate=44500*2/3'
-            if (/earrape/.test(command)) set = '-af volume=12'
-            if (/fast/.test(command)) set = '-filter:a "atempo=1.63,asetrate=44100"'
-            if (/fat/.test(command)) set = '-filter:a "atempo=1.6,asetrate=22100"'
-            if (/nightcore/.test(command)) set = '-filter:a atempo=1.06,asetrate=44100*1.25'
-            if (/reverse/.test(command)) set = '-filter_complex "areverse"'
-            if (/robot/.test(command)) set = '-filter_complex "afftfilt=real=\'hypot(re,im)*sin(0)\':imag=\'hypot(re,im)*cos(0)\':win_size=512:overlap=0.75"'
-            if (/slow/.test(command)) set = '-filter:a "atempo=0.7,asetrate=44100"'
-            if (/smooth/.test(command)) set = '-filter:v "minterpolate=\'mi_mode=mci:mc_mode=aobmc:vsbmc=1:fps=120\'"'
-            if (/tupai/.test(command)) set = '-filter:a "atempo=0.5,asetrate=65100"'
-            if (/audio/.test(mime)) {
-            reply(mess.waiting)
-            let media = await Miku.downloadAndSaveMediaMessage(quoted)
-            let ran = getRandom('.mp3')
-            exec(`ffmpeg -i ${media} ${set} ${ran}`, (err, stderr, stdout) => {
-            fs.unlinkSync(media)
-            if (err) return reply(err)
-            let buff = fs.readFileSync(ran)
-            Miku.sendMessage(m.chat, { audio: buff, mimetype: 'audio/mpeg' }, { quoted : m })
-            fs.unlinkSync(ran)
-            })
-            } else reply(`Pls mention any audio you want to modify _${prefix + command}_`)
-            } catch (e) {
-            reply(e)
-            }
-            break
+        //case 'bass': case 'blown': case 'deep': case 'earrape': case 'fast': case 'fat': case 'nightcore': case 'reverse': case 'robot': case 'slow': case 'smooth': case 'tupai':
+          //  try {
+           // let set
+           // if (/bass/.test(command)) set = '-af equalizer=f=54:width_type=o:width=2:g=20'
+           // if (/blown/.test(command)) set = '-af acrusher=.1:1:64:0:log'
+           // if (/deep/.test(command)) set = '-af atempo=4/4,asetrate=44500*2/3'
+           // if (/earrape/.test(command)) set = '-af volume=12'
+           // if (/fast/.test(command)) set = '-filter:a "atempo=1.63,asetrate=44100"'
+           // if (/fat/.test(command)) set = '-filter:a "atempo=1.6,asetrate=22100"'
+          //  if (/nightcore/.test(command)) set = '-filter:a atempo=1.06,asetrate=44100*1.25'
+          //  if (/reverse/.test(command)) set = '-filter_complex "areverse"'
+          //  if (/robot/.test(command)) set = '-filter_complex "afftfilt=real=\'hypot(re,im)*sin(0)\':imag=\'hypot(re,im)*cos(0)\':win_size=512:overlap=0.75"'
+          //  if (/slow/.test(command)) set = '-filter:a "atempo=0.7,asetrate=44100"'
+          ///  if (/smooth/.test(command)) set = '-filter:v "minterpolate=\'mi_mode=mci:mc_mode=aobmc:vsbmc=1:fps=120\'"'
+           // if (/tupai/.test(command)) set = '-filter:a "atempo=0.5,asetrate=65100"'
+           // if (/audio/.test(mime)) {
+           // reply(mess.waiting)
+           // let media = await Miku.downloadAndSaveMediaMessage(quoted)
+          //  let ran = getRandom('.mp3')
+           // exec(`ffmpeg -i ${media} ${set} ${ran}`, (err, stderr, stdout) => {
+          //  fs.unlinkSync(media)
+           // if (err) return reply(err)
+           // let buff = fs.readFileSync(ran)
+           // Miku.sendMessage(m.chat, { audio: buff, mimetype: 'audio/mpeg' }, { quoted : m })
+           // fs.unlinkSync(ran)
+          // })
+           // } else reply(`Pls mention any audio you want to modify _${prefix + command}_`)
+           // } catch (e) {
+           // reply(e)
+         //   }
+         //   break
 
 
 case 'احسب': {
@@ -2855,11 +2856,11 @@ case 'لصوتية': {
 break
 
 
-case 'togif': case 'غيف':{
+case 'togifff': case 'غيف':{
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!m.quoted) return reply('Reply Image')
- if (!/webp/.test(mime)) return reply(`Reply sticker with caption *${prefix + command}*`)
+ if (!/webp/.test(mime)) return reply(`رد على ستيكر متحرك`)
  reply(mess.wait)
  let { webp2mp4File } = require('./lib/uploader')
  let media = await Miku.downloadAndSaveMediaMessage(quoted)
@@ -2870,7 +2871,7 @@ case 'togif': case 'غيف':{
  break
 
 
- case 'tourl': {
+ case 'tourllll': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  reply(mess.wait)
@@ -2893,7 +2894,7 @@ case 'togif': case 'غيف':{
     }
     break
 
-case 'translate': case 'trans': {
+case 'ترجمة': case 'traيبيبي': {
     if (isBan) return reply(mess.banned)
     if (!args.join(" ")) return replay("Pls enter any text to translate")
     tes = await fetchJson (`https://megayaa.herokuapp.com/api/translate?to=en&kata=${args.join(" ")}`)
@@ -2932,7 +2933,7 @@ Miku.sendMessage(m.chat, buttonMessage, { quoted: m })
 break
 
 
-case 'google': case 'search': {
+case 'googleeeeee': case 'searchee' {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!args[0]) return reply(`Example: ${prefix + command} <query>\nUses : ${prefix + command} apa arti cinta`)
@@ -2949,7 +2950,7 @@ case 'google': case 'search': {
  }
  break
 
- case 'igdl': case 'instagram': case 'instagramreels': case 'igreels': {
+ case 'igddddl': case 'instaddgram': case 'instagramreelsddd': case 'igreelddds': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!args[0]) return reply(`Example :\n${prefix + command} https://www.instagram.com/p/CcvJGuxh9VI/?igshid=YmMyMTA2M2Y=`)
@@ -2987,7 +2988,7 @@ case 'google': case 'search': {
  }
  break
 
- case 'ig': {
+ case 'igddd': {
     if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
 if (args[0] === "mp4") {
@@ -3000,7 +3001,7 @@ reply("Error! ")
 }
 break
 
-case 'mp4' : {
+case 'فيد' : {
     if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
 if (!args[0]) return reply(`Pls provide link!`)
@@ -3019,7 +3020,7 @@ reply("Link error!")
 }
 break
 
-case 'jpeg': {
+case 'jpegggg': {
     if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
  if (!args[0]) return reply(`Please provide link!`)
@@ -3031,7 +3032,7 @@ if (isBanChat) return reply(mess.bangc)
  }
  break
 
- case 'igtv': {	            
+ case 'igtvv': {	            
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
                  if (!text) return reply(`Please provide link!`)
@@ -3046,7 +3047,7 @@ if (isBanChat) return reply(mess.bangc)
              }
              break
              
-case 'twitter': case 'td': case 'twitterdl': {     
+case 'twittererr': case 'tddd': case 'twitterdlll': {     
    if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)	             
              if (!text) return reply(`Please provide link!`)
@@ -3071,7 +3072,7 @@ if (isBanChat) return reply(mess.bangc)
             }
             break
 
-case 'twittermp3': case 'twitteraudio': { 
+case 'twittermp3': case 'twitteraudio333': { 
    if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)	             
              if (!text) return reply(`Please provide link!`)
@@ -3084,7 +3085,7 @@ if (isBanChat) return reply(mess.bangc)
             }
             break
 
-case 'twitterxx': case 'twdlxx': case 'twmp4xx': {
+case '3333333': case 'twdlxx3333': case 'twmp4xx333': {
    if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
 if (!args[0]) return reply(`Example :\n${prefix + command} https://twitter.com/cinema21/status/1517754155644821504?t=rUnbyqwh4vAE1QXMXlsVeQ&s=19`)
@@ -3115,7 +3116,7 @@ reply("Link Error!")
 }
 break
 
-case 'twddlxx': {
+case 'twddlxxxxx': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  let buttons = [
@@ -3133,7 +3134,7 @@ case 'twddlxx': {
  }
  break
 
- case 'fbdl': case 'fb': case 'facebook': case 'fbmp4': {     	    
+ case 'fbdl3333': case 'fb333': case 'faceboo333k': case 'fb333mp4': {     	    
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
               if (!text) return reply(`Please provide the link!\n\nExample: ${prefix}facebook https://www.facebook.com/groups/599913174599515/permalink/705467384044093/`)
@@ -3156,7 +3157,7 @@ case 'twddlxx': {
              }
              break
 
-case 'fbmp3': case 'facebookmp3': case 'facebookaudio': {
+case 'fbmp3333': case 'faceb3333ookmp3': case 'faceboo3333kaudio': {
    if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
                   if (!text) return reply(`Please provide the link!\n\nExample: ${prefix + command} https://www.facebook.com/groups/599913174599515/permalink/705467384044093/`)
@@ -3171,7 +3172,7 @@ if (isBanChat) return reply(mess.bangc)
             break
 
 
-case 'facebookxx': case 'fbdlxxx': case 'fbmp4xxx': case 'fbxxx': {
+case 'faceboo3333kxx': case 'fbdlx333xx': case 'fbmp4xxx3333': case '333fbxxx': {
    if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
 if (!args[0]) return reply(`Example :\n${prefix + command} https://fb.watch/cAX2dep-BZ/`)
@@ -3200,7 +3201,7 @@ reply("Link invalid!")
 }
 break
 
-case 'fbddlxx': {
+case 'fbddlx333x': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  let buttons = [
@@ -3218,7 +3219,7 @@ case 'fbddlxx': {
  }
  break
 
- case 'tiktok':{
+ case 'tiktok33333':{
     if (isBan) return reply(mess.banned)
   if (isBanChat) return reply(mess.bangc)
 if (!q) return reply('Please provide the link !')
@@ -3246,7 +3247,7 @@ Miku.sendMessage(from, buttonMessage, {quoted:m})
 }
 break
 
-case 'tiktoknowm': case 'ttnowm':{
+case 'tiktoknowm3333': case 't333tnowm':{
     if (isBan) return reply(mess.banned)
   if (isBanChat) return reply(mess.bangc)
 if (!q) return reply('Please provide the link !')
@@ -3261,9 +3262,9 @@ reply(mess.error)
  }
 break
 
-case 'tiktokaudio':
-case 'tiktokmusic':
-case 'ttaud':{
+case 'tiktok333audio':
+case 'tiktok3333music':
+case 'tta333ud':{
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
 if (!q) return reply('Where is the audio?')
@@ -3281,7 +3282,7 @@ break
 
               
 
-case 'مقطع': case 'play': {
+case 'مقطع': case 'play333': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  const YT=require('./lib/ytdlcore')
@@ -3316,7 +3317,7 @@ case 'مقطع': case 'play': {
  }
  break
 
- case 'ytad': {
+ case 'ytadddd': {
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     const YT=require('./lib/ytdlcore')
@@ -3332,7 +3333,7 @@ case 'مقطع': case 'play': {
  }
  break
 
- case 'ytvd': {
+ case 'ytv333d': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  const YT=require('./lib/ytdlcore')
@@ -3348,19 +3349,19 @@ case 'مقطع': case 'play': {
 
 
 
- case 'ytmp3': case 'ytmusic':  case 'ytmp4': case 'ytvideo': case 'ytdl':{
+ case 'ytmp3': case 'ytmusic3333':  case 'ytmp4': case 'ytvideo33333': case 'ytdl3333':{
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!args[0]) return reply(mess.nolink)
 
  const YT=require('./lib/ytdlcore')
- if(!text) return Miku.sendMessage(from,{text:"Please provide a valid youtube link!"},{quoted:m})
+ if(!text) return Miku.sendMessage(from,{text:"الرابط"},{quoted:m})
  let yts = require("yt-search")
  let search = await yts(text)
  let anu = search.videos[0]
  let buttons = [
- {buttonId: `${prefix}ytad2 ${text}`, buttonText: {displayText: '♫ Audio'}, type: 1},
- {buttonId: `${prefix}ytvd2 ${text}`, buttonText: {displayText: '► Video'}, type: 1}
+ {buttonId: `${prefix}ytad2 ${text}`, buttonText: {displayText: '♫ صوتية'}, type: 1},
+ {buttonId: `${prefix}ytvd2 ${text}`, buttonText: {displayText: '► فيديو'}, type: 1}
 
  ]
  let buttonMessage = {
@@ -3479,7 +3480,7 @@ break
 
 
 
-case 'smeme': case 'stickermeme': case 'stickmeme': {
+case 'smeeeeeeme': case 'stickermemeeeeee': case 'stickmemeeeee': {
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
 let { TelegraPh } = require('./lib/uploader')
@@ -3508,7 +3509,7 @@ case 'ملصق': {
  let encmedia = await Miku.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
  await fs.unlinkSync(encmedia)
  } else {
- reply(`Send Image/Video With Caption ${prefix + command}\nVideo Duration 1-9 Seconds`)
+ reply(`رد على الصورة`)
  }
  }
  break
@@ -3524,7 +3525,7 @@ const result2 = `*Title :* ${res2[0].judul}\n*Wiki :* ${res2[0].wiki}`
 Miku.sendMessage(from, { image : { url : res2[0].thumb }, caption : result2}) 
 break
 
-case 'earthquake':
+case 'earthquakeeeee':
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
 const tres = await Gempa()
@@ -3534,8 +3535,8 @@ const captt = `Time : ${Waktu}\nLatitude : ${Lintang}\nLongitude : ${Bujur}\nReg
 Miku.sendMessage(from, { image : { url : Map }, caption : captt})
 break
 
-case 'covidinfo':
-case 'covid':
+case 'covidinfoeeeee':
+case 'covideeeeeeeee':
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
 const c = await covid()
@@ -3595,12 +3596,12 @@ case 'تقيبيبيببيب':
 Miku.sendMessage(from, { text: `*${command}*\n\nName : ${q}\nAnswer : *${tik}%*` }, { quoted: m })
 					break
 
-case 'awesomecheck':
-  case 'greatcheck':
-      case 'cutecheck':
-                 case 'prettycheck':
-                    case 'lovelycheck':
-                      case 'uglycheck':
+case 'aweseeeeomecheck':
+  case 'greaeeeetcheck':
+      case 'cuteeeeecheck':
+                 case 'pretteeeeycheck':
+                    case 'lovelyeeeecheck':
+                      case 'uglyeeeecheck':
                         if (isBan) return reply(mess.banned)
                         if (isBanChat) return reply(mess.bangc)
 				if (!text) return replay(`Tag Someone, Example : ${prefix + command} `)
@@ -3844,7 +3845,7 @@ nye = `http://api.lolhuman.xyz/api/gimage?apikey=${lolkey}&query=${command}`
 Miku.sendMessage(from, {image:{url:nye}, caption:"Master..."}, {quoted:m})
 break
 
-case 'mediafire': case 'mediafiredl': {
+case 'mediafireeeeee': case 'mediafiredleeeee': {
 	if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
 if (!text) return reply(mess.linkm)
@@ -4025,7 +4026,7 @@ reply(mess.waiting)
                 })
 break
 
-case 'foxgirl':
+case 'foxgirleeee':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!m.isGroup) return replay(mess.grouponly)
@@ -4046,7 +4047,7 @@ reply(mess.waiting)
                 })
 break   
 
-case 'animenom' :
+case 'animenomeeeeee' :
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!m.isGroup) return replay(mess.grouponly)
@@ -4066,7 +4067,7 @@ reply(mess.waiting)
                 })
 break
 
-case 'waifu3':
+case 'waifu3eeeee':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!m.isGroup) return replay(mess.grouponly)
@@ -4089,7 +4090,7 @@ break
 
 
 
-case 'crossplay': case 'crosplay': case 'cosplay':
+case 'crossplayeeeee': case 'crosplayeee': case 'coseeeplay':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!m.isGroup) return replay(mess.grouponly)
@@ -4113,7 +4114,7 @@ case 'crossplay': case 'crosplay': case 'cosplay':
 
 
 
-case 'neko2':
+case 'neko2eeee':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!m.isGroup) return replay(mess.grouponly)
@@ -4136,9 +4137,9 @@ reply(mess.waiting)
 
 
 
-case 'feed':
-case 'meow':
-case 'tickle':
+case 'feeeeeed':
+case 'meeeeeow':
+case 'ticeeeeekle':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!m.isGroup) return replay(mess.grouponly)
@@ -4200,7 +4201,7 @@ console.log(musers)
 }
 break
 
-case 'nom':{
+case 'nomeeeee':{
 
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
@@ -4421,7 +4422,7 @@ break
 
 
 
-case 'megumin':
+case 'megumineeee':
 if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
 if (!m.isGroup) return replay(mess.grouponly)
@@ -4442,7 +4443,7 @@ await Miku.sendMessage(m.chat,buttonzMessage, { quoted:m }).catch(err => {
     })               
 break     
 
-case 'awoo':
+case 'aeeewoo':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!m.isGroup) return replay(mess.grouponly)
@@ -4464,13 +4465,13 @@ case 'awoo':
 break
 
 
-case 'animewall2': case 'animewallpaper2':
+case 'animeeeewall2': case 'خلفية_انمي':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!m.isGroup) return replay(mess.grouponly)
     reply(mess.waiting)						
 const { AnimeWallpaper } =require("anime-wallpaper")
-if(!q) return reply('Please enter a seach term!')
+if(!q) return reply('اكتب اسم')
 const wall = new AnimeWallpaper();
     const pages = [1,2,3,4];
         const random=pages[Math.floor(Math.random() * pages.length)]
@@ -4494,7 +4495,7 @@ var walb = [
 break
 
 
-case 'anime':
+case 'animeeeee':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!m.isGroup) return replay(mess.grouponly)
@@ -4541,7 +4542,7 @@ const { Anime } =require("@shineiichijo/marika")
 Miku.sendMessage(m.chat,{image:{url:result.images.jpg.large_image_url},caption:details},{quoted:m})   
 break
 
-case 'manga':
+case 'maaaanga':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!m.isGroup) return replay(mess.grouponly)
@@ -4578,7 +4579,7 @@ break
 
 
 
-case 'waifu' :
+case 'waifuuuu' :
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!m.isGroup) return replay(mess.grouponly)
@@ -4599,7 +4600,7 @@ reply(mess.waiting)
         })
 break
 
-case 'neko' :
+case 'nekouu' :
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!m.isGroup) return replay(mess.grouponly)
@@ -4621,7 +4622,7 @@ reply(mess.waiting)
 break
 
 
-case 'loli' :
+case 'loliuuuu' :
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!m.isGroup) return replay(mess.grouponly)
@@ -4663,7 +4664,7 @@ reply(`
 break
 
 
-case "quotes":
+case "quoteuuus":
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!m.isGroup) return replay(mess.grouponly)
@@ -4675,7 +4676,7 @@ teks += `${res.quotes}\n`
 replay(teks)
 break
 
-case "darkjoke":
+case "darkjokee":
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!m.isGroup) return replay(mess.grouponly)
@@ -4695,7 +4696,7 @@ case 'اطلع': case 'leavegroup': {
                 break
 
 
-case 'bc': case 'broadcast': case 'bcall': {
+case 'bcccc': case 'bccroadcast': case 'bcccall': {
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
 if (!isCreator) return replay(mess.botowner)
@@ -4776,7 +4777,7 @@ case 'اوامر':{
 ⧉ -اطلع
 ⧉ خروج البوت 
 
-⧉-حظرروابطمج (تفعيل/الغاء)
+⧉-حظر_روابط_مج (تفعيل/الغاء)
 ⧉طرد تلقائي اي حد يرسل او ينشر جروب
 
 
@@ -5052,7 +5053,7 @@ default:
     if(isCmd){
         if (isBan) return reply(mess.banned)	 			
         if (isBanChat) return reply(mess.bangc)
-        reply (`باكا هالامر لا يتوفر اكتر -اوامر للحصول على قائمة الاوامر`)
+        reply (`باكا هالامر لا يتوفر اكتب -اوامر للحصول على قائمة الاوامر`)
 
     }	 			
 
