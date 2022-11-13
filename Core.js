@@ -1406,7 +1406,7 @@ switch(command) {
     break
 
 
-case 'بروفايل':
+case 'me': case 'بروفايل': case 'p':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
   if (!isDarah){ addInventoriDarah(m.sender, DarahAwal) }
@@ -1425,15 +1425,15 @@ case 'بروفايل':
     
           } catch (e) {
      
-      pfp ='https://wallpapercave.com/wp/wp2239485.jpg'
+      pfp ='https://wallpapercave.com/wp/wp10524580.jpg'
     }
 
-     const profilexx = `*「  معلومات شخصية  」*\n\n*الاسم* : ${pushname}\n*البايو* : ${bioo}\n*حالتك في الجروب* : ${adn}\n*المستوى* : ${levelMenu}\n*خبرتك* : ${xpMenu} من ${reqXp}\n*رانكك* : ${role}`
+     const profilexx = `*「  Profile Info  」*\n\n*User Name* : ${pushname}\n*Bio* : ${bioo}\n*Group Admin Status* : ${adn}\n*Level* : ${levelMenu}\n*Exp* : ${xpMenu} out of ${reqXp}\n*Role* : ${role}`
  
 
 
 let buttonspro = [
-    {buttonId: `${prefix}soulmate`, buttonText: {displayText: 'توأم روحك'}, type: 1}
+    {buttonId: `${prefix}سولميت`, buttonText: {displayText: 'Your Soulmate'}, type: 1}
     ]
             let buttonMessage = {
                 image: { url: pfp },
@@ -1450,7 +1450,7 @@ let buttonspro = [
 case 'حظر_جروب' :{
 if (isBan) return reply(mess.banned)	 			
 if (!isCreator) return replay(mess.botowner)
-if (args[0] === "on") {
+if (args[0] === "تفعيل") {
 if (isBanChat) return replay('تم حظري من هالجروب')
 banchat.push(from)
 replay('لا يمكنك استخدامي من هالجروب حاليا!')
@@ -1461,17 +1461,17 @@ members.map(async adm => {
 mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
 Miku.sendMessage(from, {text: `\`\`\`「 ملاحظة 」\`\`\`\n\nهالجروب تم حظره من استخدام البوت!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
-} else if (args[0] === "off") {
+} else if (args[0] === "الغاء") {
 if (!isBanChat) return replay('اوريدي محظور')
 let off = banchat.indexOf(from)
 banchat.splice(off, 1)
 replay('تم فك الحظر ')
 } else {
   let buttonsntnsfw = [
-  { buttonId: `${prefix}bangroup on`, buttonText: { displayText: 'حظر' }, type: 1 },
-  { buttonId: `${prefix}bangroup off`, buttonText: { displayText: 'فك' }, type: 1 }
+  { buttonId: `${prefix}bangroup on`, buttonText: { displayText: 'تفعيل' }, type: 1 },
+  { buttonId: `${prefix}bangroup off`, buttonText: { displayText: 'الغاء' }, type: 1 }
   ]
-  await Miku.sendButtonText(m.chat, buttonsntnsfw, `Please choose any Button below.\n\n *On / Off*`, `${global.BotName }`, m)
+  await Miku.sendButtonText(m.chat, buttonsntnsfw, `*الغاء / تفعيل*`, `${global.BotName }`, m)
   }
   }
   break
@@ -1770,7 +1770,7 @@ case 'delete': case 'del': {
  break
 */
 
- case 'حذف' {
+ case 'حذف' : {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!isBotAdmins) return replay(mess.botadmin)
@@ -1821,24 +1821,24 @@ await Miku.sendMessage(m.chat, { delete: key })
  }
  break
 
- case 'afk': {
+ case 'مخفي': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  let user = global.db.users[m.sender]
  user.afkTime = + new Date
  user.afkReason = args.join(" ")
- replay(`${m.pushName} is now Away From Keyboard.\nAFK Reason : ${args.join(" ") ? args.join(" ") : ''}`)
+ replay(`${m.pushName} لا يوجد حاليا.\n السبب : ${args.join(" ") ? args.join(" ") : ''}`)
  }
  break
 
 
- case 'fliptext': {
+ case 'عكس': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
- if (args.length < 1) return replay(`Example:\n${prefix}fliptext ${OwnerName}`)
+ if (args.length < 1) return replay(`مثال:\n${prefix}عكس ${OwnerName}`)
  quere = args.join(" ")
  flipe = quere.split('').reverse().join('')
- replay(`\`\`\`「  Text Flipper Tool  」\`\`\`\n*Input text :*\n${quere}\n*Fliped text :*\n${flipe}`)
+ replay(`\`\`\`「  الاصلية  」\`\`\`\n*الاصلية:*\n${quere}\n*تم عكسها :*\n${flipe}`)
  }
  break
 
@@ -1880,7 +1880,7 @@ await Miku.sendMessage(m.chat, { delete: key })
  if (!m.isGroup) return replay(mess.grouponly)
  if (!isBotAdmins) return replay(mess.botadmin)
  if (!isAdmins && !isCreator) return replay(mess.useradmin)
- if (args[0] === "on") {
+ if (args[0] === "تفعيل") {
  if (AntiLink) return replay('مفعل ')
  ntilink.push(from)
  replay('تم تفعيل حظر الروابط في هذا الجروب')
@@ -1891,17 +1891,17 @@ await Miku.sendMessage(m.chat, { delete: key })
  mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
  })
  Miku.sendMessage(from, {text: `\`\`\`「 Warning 」\`\`\`\n\nAntilink System Activated!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
- } else if (args[0] === "off") {
+ } else if (args[0] === "الغاء") {
  if (!AntiLink) return replay('تم الالغاء')
  let off = ntilink.indexOf(from)
  ntilink.splice(off, 1)
  replay('تم الغاء حظر الروابط!')
  } else {
    let buttonsntilink = [
-   { buttonId: `${prefix}antilinkgc on`, buttonText: { displayText: 'حظر' }, type: 1 },
-   { buttonId: `${prefix}antilinkgc off`, buttonText: { displayText: 'فك' }, type: 1 }
+   { buttonId: `${prefix}antilinkgc on`, buttonText: { displayText: 'تفعيل' }, type: 1 },
+   { buttonId: `${prefix}antilinkgc off`, buttonText: { displayText: 'الغاء' }, type: 1 }
    ]
-   await Miku.sendButtonText(m.chat, buttonsntilink, `Please click the button below حظر / فك`, `${global.BotName}`, m)
+   await Miku.sendButtonText(m.chat, buttonsntilink, ` تفعيل / الغاء`, `${global.BotName}`, m)
    }
    }
    break
@@ -2353,7 +2353,7 @@ case 'happymod': {
  }
  break
 
-case 'block': {
+case 'بلوك': {
     if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
      if (!isCreator) return reply(mess.botowner)
@@ -2362,7 +2362,7 @@ if (isBanChat) return reply(mess.bangc)
  }
  break
 
-case 'unblock': {
+case 'ان_بلوك': {
             if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
      if (!isCreator) return reply(mess.botowner)
@@ -2576,9 +2576,9 @@ let mentioned = participants.map(v => v.jid)
      if (!isBotAdmins) return replay(mess.botadmin)
      if (!isAdmins && !isCreator) return replay(mess.useradmin)
      if (args[0] === 'غلق'){
-     await Miku.groupSettingUpdate(m.chat, 'announcement').then((res) => replay(`Group has been closed!`)).catch((err) => replay(jsonformat(err)))
+     await Miku.groupSettingUpdate(m.chat, 'announcement').then((res) => replay(`تم قفل الجروب!`)).catch((err) => replay(jsonformat(err)))
      } else if (args[0] === 'فتح'){
-     await Miku.groupSettingUpdate(m.chat, 'not_announcement').then((res) => replay(`Group has been opened!`)).catch((err) => replay(jsonformat(err)))
+     await Miku.groupSettingUpdate(m.chat, 'not_announcement').then((res) => replay(`تم فتح الجروب!`)).catch((err) => replay(jsonformat(err)))
      } else {
      let buttons = [
      { buttonId: `${prefix}group open`, buttonText: { displayText: 'فتح' }, type: 1 },
@@ -2655,7 +2655,7 @@ let mentioned = participants.map(v => v.jid)
      sizny = res.content[0].attrs.size
      if (sizny < 20) {
      teks = `Sorry, munimun 20 members are required in a group to add bot!`
-     sendOrder(m.chat, teks, "667140254502463", fs.readFileSync('./Assets/pic7.jpg'), `${global.packname}`, `${global.BotName}`, "916909137213@s.whatsapp.net", "AR6NCY8euY5cbS8Ybg5Ca55R8HFSuLO3qZqrIYCT7hQp0g==", "99999999999999999999")
+     sendOrder(m.chat, teks, "667140254502463", fs.readFileSync('./Assets/pic7.jpg'), `${global.packname}`, `${global.BotName}`, "212636249972@s.whatsapp.net", "AR6NCY8euY5cbS8Ybg5Ca55R8HFSuLO3qZqrIYCT7hQp0g==", "99999999999999999999")
      } else if (sizny > 20) {
      await Miku.groupAcceptInvite(vcc).then(async(res) => replay(jsonformat(res))).catch(_ => _)
      replay("Joined !")
@@ -2671,7 +2671,7 @@ let mentioned = participants.map(v => v.jid)
      case 'صوت': {
         if (isBan) return reply(mess.banned)	 			
      if (isBanChat) return reply(mess.bangc)
-     if (!args.join(" ")) return reply(`Example: ${prefix + command} 10`)
+     if (!args.join(" ")) return reply(`مثال: ${prefix + command} 10`)
      media = await Miku.downloadAndSaveMediaMessage(quoted, "volume")
      if (isQuotedAudio) {
      rname = getRandom('.mp3')
@@ -2763,17 +2763,17 @@ let mentioned = participants.map(v => v.jid)
 case 'احسب': {
    if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
-if (args.length < 1) return reply(`*Example :*\n${prefix}calculator 2*5\n\n`)
+if (args.length < 1) return reply(`*مثال :*\n${prefix}احسب 2*5\n\n`)
 let qsd = args.join(" ")
 if (typeof mathjs.evaluate(qsd) !== 'number') {
-reply('Error')
+reply('خطأ')
 } else {
-reply(`\`\`\`「 _Calculator Tool_ 」\`\`\`\n\n*Input :* ${qsd}\n*Calculation Result :* ${mathjs.evaluate(qsd.replace(/×/g, "*").replace(/x/g, "*").replace(/÷/g, "/"))}`)
+reply(`\`\`\`「 _حسبة_ 」\`\`\`\n\n*Input :* ${qsd}\n*النتيجة :* ${mathjs.evaluate(qsd.replace(/×/g, "*").replace(/x/g, "*").replace(/÷/g, "/"))}`)
 }
 }
 break
 
-case 'public': {
+case 'عام': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!isCreator) return reply(mess.owner)
@@ -2783,7 +2783,7 @@ case 'public': {
  }
  break
  
- case 'self': {
+ case 'خاص': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!isCreator) return reply(mess.botowner)
@@ -2798,7 +2798,7 @@ case 'لصورة': {
    if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
 if (!m.quoted) return reply('Reply Image')
-if (!/webp/.test(mime)) return reply(`Reply sticker with caption *${prefix + command}*`)
+if (!/webp/.test(mime)) return reply(`رد على الملصق الي تريد تحويله لصورة *${prefix + command}*`)
 reply(mess.waiting)
 let media = await Miku.downloadAndSaveMediaMessage(quoted)
 let ran = await getRandom('.png')
@@ -2829,8 +2829,8 @@ case 'لفيديو': {
 case 'لصوت':  {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
- if (!/video/.test(mime) && !/audio/.test(mime)) return reply(`Send/Reply Video/Audio You Want To Use As Audio With Caption ${prefix + command}`)
- if (!m.quoted) return reply(`Send/Reply Video/Audio You Want To Use As Audio With Caption ${prefix + command}`)
+ if (!/video/.test(mime) && !/audio/.test(mime)) return reply(`رد على الفيديو الي تريد تحوله لصوت ${prefix + command}`)
+ if (!m.quoted) return reply(`رد على الفيديو الي تريد تحوله لصوت  ${prefix + command}`)
  reply(mess.waiting)
  let media = await quoted.download()
  let { toAudio } = require('./lib/converter')
@@ -2842,9 +2842,9 @@ break
 case 'لصوتية': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
- if (/document/.test(mime)) return reply(`Send/Reply Video/Audio You Want To Convert Into MP3 With Caption ${prefix + command}`)
- if (!/video/.test(mime) && !/audio/.test(mime)) return reply(`Send/Reply Video/Audio You Want To Convert Into MP3 With Caption ${prefix + command}`)
- if (!m.quoted) return reply(`Send/Reply Video/Audio You Want To Convert Into MP3 With Caption ${prefix + command}`)
+ if (/document/.test(mime)) return reply(`رد على الفيديو الي تريد تحوله لصوت ${prefix + command}`)
+ if (!/video/.test(mime) && !/audio/.test(mime)) return reply(`رد على الفيديو الي تريد تحوله لصوت  ${prefix + command}`)
+ if (!m.quoted) return reply(`رد على الفيديو الي تريد تحوله لصوت ${prefix + command}`)
  reply(mess.waiting)
  let media = await quoted.download()
  let { toAudio } = require('./lib/converter')
@@ -3286,7 +3286,7 @@ case 'مقطع': case 'play': {
  const YT=require('./lib/ytdlcore')
  const { isUrl, fetchBuffer } = require('./lib/Function')
 
- if(!text) return Miku.sendMessage(from,{text:"Pls enter song name to play!"},{quoted:m})
+ if(!text) return Miku.sendMessage(from,{text:"اكتب اسم المقطع او اجلب الرابط"},{quoted:m})
  let yts = require("yt-search")
  let search = await yts(text)
  let anu = search.videos[0]
@@ -3297,7 +3297,7 @@ case 'مقطع': case 'play': {
  ]
  let buttonMessage = {
  image: { url: anu.thumbnail },
- caption: `「  _Miku Youtube Player 2.0_  」
+ caption: `「  _مقطع يوتوب_  」
 
 *Title :* ${anu.title}
 
@@ -3596,10 +3596,7 @@ Miku.sendMessage(from, { text: `*${command}*\n\nName : ${q}\nAnswer : *${tik}%*`
 
 case 'awesomecheck':
   case 'greatcheck':
-   // case 'gaycheck':
       case 'cutecheck':
-       //  case 'lesbiancheck':
-            // case 'hornycheck':
                  case 'prettycheck':
                     case 'lovelycheck':
                       case 'uglycheck':
@@ -3618,9 +3615,33 @@ case 'هل':
 					if (!text) return replay(` متال هل انا محنك`)
 					const Mikutttt =['شدراني انا','معرفش','تقصد نفسك','لا','حصل','نعم','صح','شدخلني','دز','ون بيس عمك','حصل','محصلش','دا عمك','ادلف انتا و هو','صادف','ايوة بالضبط كدا','يبب']
 					const taky = Mikutttt[Math.floor(Math.random() * Mikutttt.length)]
-					Miku.sendMessage(from, { text: `Character Check : ${q}\nAnswer : *${taky}*` }, { quoted: m })
+					Miku.sendMessage(from, { text: `هل : ${q}\nالجواب : *${taky}*` }, { quoted: m })
 				     break
-                   
+case 'مهنتي':
+    if (isBan) return reply(mess.banned)
+    if (isBanChat) return reply(mess.bangc)
+				
+					const Mikutttty =['متسول الله يشوف من حالك','رجل اعمال حرامي','حرامي','تافه','ماكدو','ليفرور','تاكسي','فيلسوف قد ما تتفلسف عالفاضي','سائق توك توك','مرتزقة','تاجر مخدرات','عاطل عن العمل','بيطري','مانجاكا','محامي','معلم','محنك ','راقص']
+					const takyy = Mikutttty[Math.floor(Math.random() * Mikutttty.length)]
+					Miku.sendMessage(from, { text: `وظيفتك ${q}\nالجواب : *${takyy}*` }, { quoted: m })
+				     break
+case 'شبيهي':
+    if (isBan) return reply(mess.banned)
+    if (isBanChat) return reply(mess.bangc)
+				
+					const Mikuttttyj =['اللمبي','ال باتشينو','تيريون لانيستر','ديمون تارغاريان','اكاشي','لوفي','جيمي لانستر','ديكابريو','جون سنو','عادل امام','حديدان ههه ','توم هاردي','محمد صلاح ','محمد رمضان ','توماس شيلبي ','بروس لي ','اللمبي ','الجوكر','سول','توني ستارك','سيلفيستر ستالون','جاكي شان']
+					const takyyj = Mikuttttyj[Math.floor(Math.random() * Mikuttttyj.length)]
+					Miku.sendMessage(from, { text: `شبيهي من المشاهير ${q}\nالجواب : *${takyyj}*` }, { quoted: m })
+				     break
+case 'اقدر':
+    if (isBan) return reply(mess.banned)
+    if (isBanChat) return reply(mess.bangc)
+					if (!text) return replay(`مثال : اقدر اصير مشرف`)
+					const Mikuttttz =['شدراني انا','معرفش','ان شاء الله بربي','لا','ادلف','u can do it bro','تقدر','اجيك من الاخر ؟ انتا قدها ','دز','لا','في العالم الموازي','هتقدر لما تكون انا','دز مفيش','ما رح يصير',' ف احلامك','لا ما تقدر']
+					const takyz = Mikuttttz[Math.floor(Math.random() * Mikuttttz.length)]
+					Miku.sendMessage(from, { text: `اقدر : ${q}\nالجواب : *${takyz}*` }, { quoted: m })  
+	                              break
+					                 
  case 'dيسبيبسيare':
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
@@ -4625,7 +4646,7 @@ case 'ليريكس': {
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!m.isGroup) return replay(mess.grouponly)
-if (!text) return reply(`Comand usage: ${prefix}lyrics Thunder`)
+if (!text) return reply(`الامر: ${prefix}ليريكس Thunder`)
 reply(mess.waiting)	
 const { lyrics, lyricsv2 } = require('@bochilteam/scraper')
 const result = await lyricsv2(text).catch(async _ => await lyrics(text))
@@ -4705,94 +4726,205 @@ case 'اوامر':{
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
       
- const helpmenu = `Konichiwa *${pushname}* Senpai,
+ const helpmenu = `السلام عليكم ${pushname} انرت/ي,
 
-I am *Miku Nakano*, a bot developed by *Fantox*.
-
-🔰 My prefix is:  ${prefix}
-
-Here's the list of my Commands.
+🔰 استخدم :  -  اوامر
 
 
+⋄═──═◞🛡️ قائمة المشرفين 🛡️◟━──━⋄
+
+⧉ -طاغ
+⧉ منشن جماعي لكل الاعضاء
  
- *━━━〈  🎆 Core 🎆  〉━━━*
+⧉ -منشن
+⧉ منشن مخفي لكل الاعضاء 
 
-speak, miku, stalk, profile, help, delete, deleteall, listgc, listpc, welcome, support, repo, script 
+⧉ -حذف
+⧉ حذف رسالة البوت او العضو
  
- *━━━〈  🎀 Owner 🎀  〉━━━*
+⧉ -رابط
+⧉ جلب رابط القروب 
 
-self, public, ban, bangroup, bye, join, bye, block, unblock, broadcast 
-
- *━━━〈  ⭕ Group ⭕  〉━━━*
+⧉ -اعادة
+⧉ حذف رابط القروب 
  
-promote, demote, revoke, add, remove, tagall, hidetag, groupsetting, grouplink, setgcpp, setname, setdesc, group, nsfw 
-
- *━━━〈  ➰ Anti Link ➰  〉━━━*
+⧉ -ترقية
+⧉ ترقية عضو لمشرف 
  
-antilinkgc, antilinktg, antilinktt, antilinkytch, antilinkytvid, antilinkig, antilinkfb, antilinktwit, antilinkall, antiwame
+⧉ -تخفيض
+⧉ تخفيض مشرف لعضو 
 
- *━━━〈  🔍 Search 🔍  〉━━━*
-
-play, ytmp3, ytmp4, yts, lyrics, google, gimage, pinterest, image, movie, wallpaper, searchgc, happymod, wikimedia, ringtone, anime, animestory, manga, ringtone  
-
- *━━━〈  🔰 Convert 🔰  〉━━━*
-
-sticker, toimg, tovideo, togif , steal, stickermeme, emojimix, tourl, tomp3, toaudio
-
- *━━━〈  🔉 Audio 🔉  〉━━━*
-
-bass, tempo, blown, deep, earrape, fast, fat, nightcore, reverse, robot, slow, squirrel
-
- *━━━〈  📍 Reactions 📍  〉━━━*
-
-bonk, cry, bully, cuddle, hug, kiss, lick, pat, smug, yeet, blush, smile, wave, highfive, handhold, nom, glomp, bite, slap, kill, happy, wink, poke, dance, cringe
-
- *━━━〈  🌌 Downloader 🌌  〉━━━*
-
-play, ytmp3, ytmp4, ytvideo, mediafire, instagram, igtv, facebook, fbmp3, twitter, twittermp3, tiktok, tiktokaudio, tiktoknowm, mediafire  
-
- *━━━〈  🈴 Weeb 🈴  〉━━━*
-
-crosplay, waifu, loli, neko, ppcouple, feed, foxgirl, feed, meow, tickle, wallpaper, coffee, animenom, waifu3, neko2, feed, meow, tickle, migumin, awoo, animewallpaper2, anime, manga
-
- *━━━〈  ♨️ Informative ♨️  〉━━━*
-
-animequote, quote, covid, earthquake, wiki
-
- *━━━〈  🎗 Others 🎗  〉━━━*
-
-stickermeme, quotes, darkjoke 
-
- *━━━〈  🎐 Fun 🎐  〉━━━*
-
-reaction, truth, dare, couple, soulmate, handsomecheck, beautifulcheck, awesomecheck, greatcheck, gaycheck, cutecheck, lesbiancheck, hornycheck, prettycheck, lovelycheck, uglycheck, charactercheck
-
- *━━━〈  🪁 Essentials 🪁  〉━━━*
-
-qr, say, translate, fliptext, toletter
-
- *━━━〈  💥 NSFW 💥  〉━━━*
-
-🍁 Type " *${prefix}nsfw* " then enable NSFW (Admin only!) 
-
-🍁 Then type " *${prefix}nsfwmenu* " to get full list of NSFW commands.
-
-
-
-
- 『  *${global.BotName}*  』
- Powered by: *Fantox*
-
- 🔰 To use any of these commands type 
- " *${prefix}<Command name>* ".
+⧉ -اسم
+⧉ تغيير اسم القروب 
  
- 🔰 To get Support Group link type " *${prefix}support* ".
+⧉ -وصف
+⧉ تغيير وصف القروب 
 
- 🔰 Type " *${prefix}help* " to get full command list.`
+⧉ -صورة_قروب
+⧉ تغيير صورة قروب 
+
+⧉ -قروب (فتح/غلق)
+⧉ غلق وفتح قروب 
+ 
+⧉ -طرد
+⧉ طرد شخص من القروب 
+ 
+⧉ -ادد
+⧉ ادخال شخص للقروب 
+
+⧉ -اطلع
+⧉ خروج البوت 
+
+⧉-حظرروابطمج (تفعيل/الغاء)
+⧉طرد تلقائي اي حد يرسل او ينشر جروب
+
+
+⋄═──═◞🎆 قائمة التحويل 🎆◟━──━⋄
+
+⧉ -مـلـصـق
+⧉ انشاء ملصقات عادية ومتحركة 
+ 
+⧉ -ملصقي
+⧉ انشاء ملصق بحقوقك  
+ ⧉اكتب الحقوق بعد الامر
+
+⧉ -ايموجي
+⧉ تحويل ايموجي لصورة 
+ 
+⧉ -دمج
+⧉ دمج اثنين من الاموجي 
+
+⧉ -صوت
+⧉ رفع وتخفيض مستوى صوت
+ 
+⧉ -لصورة
+⧉ تحويل ملصق عادي لصورة 
+ 
+⧉ -لفيديو
+⧉ تحويل ملصق متحرك لفيديو 
+ 
+⧉ -لصوتية
+⧉ تحويل فيديو لصوتية 
+ 
+⧉ -غيف
+⧉ تحويل ملصق لغيف 
+ 
+
+⋄═──═◞☃️ قائمة المتعة ☃️◟━──━⋄
+
+⧉ -هل
+⧉ سؤال للبوت
+⧉ مثال : هل انا ذكي؟ 
+ 
+⧉ -اقدر
+⧉ سؤال للبوت 
+⧉ مثال :  اقدر اصير مشرف؟ 
+ 
+⧉ -تشبيك
+⧉ اعرف نسبة حبك مع شخص ما 
+ 
+⧉ -مهنتي
+⧉ اعرف وظيفتك مستقبلا 
+
+⧉ -منشني
+⧉ البوت يمنشنك
+
+⧉ -شبيهي
+⧉ ابحث عن شبيهك  من المشاهير
+ 
+⋄═──═◞🎮 قائمة الالعاب 🎮◟━──━⋄
+
+⧉ -حجر_ورق
+⧉ غير متوفر حاليا
+ 
+⧉ -سولميت
+⧉ البوت يجيبلك توأم روحك (للمزح)
+ 
+⧉ -احسب
+⧉ البوت يحل عملية حسابية 
+ 
+⧉ -عكس
+⧉ عكس كلمة او جملة 
+
+⧉ -تحدي
+⧉ البوت يجيبلك تحديات و خليك قدها
+⧉غير متوفر حاليا
+ 
+⧉ -صداقة
+⧉ يجلب لك صديقين
+
+⧉-قتل او -صفع  (منشن شخص)
+
+
+⧉-انطق 
+⧉البوت ينطق اي شي تكتبه (انجليزي)
+
+⋄═──═◞🔍 قائمة البحث 🔎◟━──━⋄
+
+⧉ -مقطع
+⧉ البحث عن مقطع أغنية 
+ 
+⧉ -فلم
+⧉ البحث عن معلومات فلم 
+ 
+⧉ -خلفية
+⧉ البحث عن خلفية انمي 
+ 
+⧉ -صورة
+⧉ البحث عن صور عشوائية 
+⧉ اكتب اسم بالانجليزي عشان ميجيب العيد 
+
+⧉ -تطقيم
+⧉ جلب تطقيمات 
+ 
+⧉ -بنتر
+⧉ بحث عن صور بنتريست 
+ 
+⧉ -ليريكس
+⧉ جلب كتابة اي اغنية 
+
+⧉ -سورتش
+⧉ مثال : سورتش اغنية ون بيس
+⧉جلب روابط من يوتوب
+
+⧉-مقطع 
+⧉يجيبلك مقطع يوتوب
+
+⋄═──═◞🔰 قائمة العضو 🔰◟━──━⋄
+
+⧉ -بروفايل
+⧉ معرفة معلوماتك 
+ 
+⧉ -مخفي
+⧉ اترك سبب ذاهبك 
+  
+ 
+⧉ -مساعدة
+⧉ لاي استفسار تريده عن البوت
+
+⧉ -المطور
+⧉ معرفة مطور البوت 
+ 
+
+⋄═──═◞🤖 قائمة المالك 🤖◟━──━⋄
+
+⧉-تبنيد (اب/فك)
+⧉تبنيد شخص من استعمال الاوامر
+
+⧉-بلوك 
+⧉حظر رقم شخص من البوت 
+
+⧉-خاص
+⧉الاوامر تشتغل مع المالك فقط
+
+⧉-حظر_جروب (تفعيل/الغاء)
+⧉توقيف البوت في الجروب
+
+⋄═──═◞⚔️اكاشي⚔️◟━──━⋄`
     
 
  let buttonshelpm = [
-    {buttonId: `${prefix}owner`, buttonText: {displayText: 'Bot Owner'}, type: 1}
+    {buttonId: `${prefix}المطور`, buttonText: {displayText: 'المطور'}, type: 1}
     ]
                 let buttonMessage = {
                     video:fs.readFileSync('./system/miku2.mp4'),gifPlayback:true,
@@ -4919,7 +5051,7 @@ default:
     if(isCmd){
         if (isBan) return reply(mess.banned)	 			
         if (isBanChat) return reply(mess.bangc)
-        reply (`No such command programmed *${pushname}* senpai! Type *${prefix}help* to get my full command list!`)
+        reply (`باكا هالامر لا يتوفر اكتر -اوامر للحصول على قائمة الاوامر`)
 
     }	 			
 
