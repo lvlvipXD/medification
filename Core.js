@@ -2532,6 +2532,7 @@ let mentioned = participants.map(v => v.jid)
  if (isBanChat) return reply(mess.bangc)
  if (!m.isGroup) return replay(mess.grouponly)
  if (!isBotAdmins) return replay(mess.botadmin)
+ if (!isAdmins && !isCreator) return replay(mess.useradmin)
  let response = await Miku.groupInviteCode(m.chat)
  Miku.sendMessage(m.chat, {text:`*اسم الجروب:* *${groupMetadata.subject}* \n\n*الرابط :* \nhttps://chat.whatsapp.com/${response}l`, "contextInfo": {
  mimetype: "image/jpeg",
