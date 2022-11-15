@@ -1433,7 +1433,7 @@ case 'me': case 'بروفايل': case 'p':
 
 
 let buttonspro = [
-    {buttonId: ``, buttonText: {displayText: 'اوكي'}, type: 1}
+    {buttonId: `اوكي`, buttonText: {displayText: 'اوكي'}, type: 1}
     ]
             let buttonMessage = {
                 image: { url: pfp },
