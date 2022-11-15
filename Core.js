@@ -1417,7 +1417,7 @@ case 'me': case 'بروفايل': case 'p':
      var flob = await getBuffer(picak+'User Profile')
      var bio= await Miku.fetchStatus(m.sender)
      var bioo = bio.status
-     const adn= isAdmins? "True":"False"
+     const adn= isAdmins? "مشرف":"غير مشرف"
      
      try {
         
@@ -1425,7 +1425,7 @@ case 'me': case 'بروفايل': case 'p':
     
           } catch (e) {
      
-      pfp ='https://wallpapercave.com/wp/wp10524580.jpg'
+      pfp ='https://wallpapercave.com/wp/wp11599851.jpg'
     }
 
      const profilexx = `*「  معلوماتك  」*\n\n*اليوزر* : ${pushname}\n*البايو* : ${bioo}\n*حالة اشرافك* : ${adn}\n*المستوى* : ${levelMenu}\n*نقاطك* : ${xpMenu} من ${reqXp}\n*رانك* : ${role}`
@@ -1433,7 +1433,7 @@ case 'me': case 'بروفايل': case 'p':
 
 
 let buttonspro = [
-    {buttonId: `${prefix}سولميت`, buttonText: {displayText: 'Your Soulmate'}, type: 1}
+    {buttonId: ``, buttonText: {displayText: 'اوكي'}, type: 1}
     ]
             let buttonMessage = {
                 image: { url: pfp },
