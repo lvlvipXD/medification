@@ -1,11 +1,10 @@
 require("./config.js")
-const { default: AkashiConnect, useSingleFileAuthState, DisconnectReason, fetchLatestBaileysVersion, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto } = require("@adiwajshing/baileys")
+const { default: A17Connect, useSingleFileAuthState, DisconnectReason, fetchLatestBaileysVersion, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto } = require("@adiwajshing/baileys")
 const { state, saveState } = useSingleFileAuthState(`./${sessionName}.json`)
 const pino = require('pino')
 const fs = require('fs')
 const chalk = require('chalk')
 const FileType = require('file-type')
-const { Boom } = require("@hapi/boom")
 const path = require('path')
 const CFonts = require('cfonts');
 const { exec, spawn, execSync } = require("child_process")
@@ -18,8 +17,8 @@ const { color } = require('./lib/color')
 
 const store = makeInMemoryStore({ logger: pino().child({ level: 'silent', stream: 'store' }) })
 
-async function startAkashi() {
-console.log(color(figlet.textSync('Akashi Bot MD', {
+async function startA17() {
+console.log(color(figlet.textSync('Akashi Bot', {
 		font: 'Pagga',
 		horizontalLayout: 'default',
 		vertivalLayout: 'default',
@@ -27,14 +26,14 @@ console.log(color(figlet.textSync('Akashi Bot MD', {
 		whitespaceBreak: true
         }), 'yellow'))
 
-console.log(color('\nحيووو معكم اكاشس.\n\nThanks for using: Akashi Bot','aqua'))
-console.log(color('\nاستمتع','aqua'))
+console.log(color('\nHello, I am Kai, the main Developer of this bot.\n\nThanks for using: Akashi Bot','aqua'))
+console.log(color('\nYou can follow me on GitHub: Kai0071','aqua'))
 
     let { version, isLatest } = await fetchLatestBaileysVersion()
-    const Akashi = AkashiConnect({
+    const Akashi = A17Connect({
         logger: pino({ level: 'silent' }),
         printQRInTerminal: true,
-        browser: ['Akashi by: Fantox','Safari','1.0.0'],
+        browser: ['Akashi by: Kai','Safari','1.0.0'],
         auth: state,
         version
     })
@@ -46,7 +45,7 @@ store.bind(Akashi.ev)
     const callerId = json.content[0].attrs['call-creator']
     if (json.content[0].tag == 'offer') {
     let pa7rick = await Akashi.sendContact(callerId, global.owner)
-    Akashi.sendMessage(callerId, { text: `باكا ممنوع تتصل!`}, { quoted : pa7rick })
+    Akashi.sendMessage(callerId, { text: `Baka! You will be blocked automatically for calling me!`}, { quoted : pa7rick })
     await sleep(8000)
     await Akashi.updateBlockStatus(callerId, "block")
     }
@@ -67,10 +66,10 @@ console.log(err)
 }
 })
 
- /*
+ /* 
 Akashi.ev.on('groups.update', async pea => {
     
-       try {
+       try {     
        ppgc = await Akashi.profilePictureUrl(pea[0].id, 'image')
        } catch {
        ppgc = 'https://wallpapercave.com/wp/wp10524580.jpg'
@@ -98,10 +97,10 @@ Akashi.ev.on('groups.update', async pea => {
         if (pea[0].announce == true) {
         //Akashi.send5ButImg(pea[0].id, `Grop has been *Closed!* Only *Admins* can send Messages!`, `Akashi Bot`, wm_fatih, [])
 
-        Akashi.sendMessage(m.chat, { image: wm_fatih, caption: 'تم قفل الجروب!'})
+        Akashi.sendMessage(m.chat, { image: wm_fatih, caption: 'Grop has been *Closed!* Only *Admins* can send Messages!'})
         } else if(pea[0].announce == false) {
        // Akashi.send5ButImg(pea[0].id, `Grop has been *Opened!* Now *Everyone* can send Messages!`, `Akashi Bot`, wm_fatih, [])
-       Akashi.sendMessage(m.chat, { image: wm_fatih, caption: 'تم فتح الجروب!'})
+       Akashi.sendMessage(m.chat, { image: wm_fatih, caption: 'Grop has been *Opened!* Now *Everyone* can send Messages!'})
         } else if (pea[0].restrict == true) {
         //Akashi.send5ButImg(pea[0].id, `Group Info modification has been *Restricted*, Now only *Admins* can edit Group Info !`, `Akashi Bot`, wm_fatih, [])
         Akashi.sendMessage(m.chat, { image: wm_fatih, caption: 'Group Info modification has been *Restricted*, Now only *Admins* can edit Group Info !'})
@@ -110,8 +109,8 @@ Akashi.ev.on('groups.update', async pea => {
         Akashi.sendMessage(m.chat, { image: wm_fatih, caption: 'Group Info modification has been *Un-Restricted*, Now only *Everyone* can edit Group Info !'})
         } else {
         //Akashi.send5ButImg(pea[0].id, `Group Subject has been uhanged To:\n\n*${pea[0].subject}*`, `Akashi Bot`, wm_fatih, [])
-        Akashitextddfq =`Group Subject has been updated To:\n\n*${pea[0].subject}*`
-        Akashi.sendMessage(pea[0].id, { image: wm_fatih, caption: Akashitextddfq})
+        A17textddfq =`Group Subject has been updated To:\n\n*${pea[0].subject}*`
+        Akashi.sendMessage(pea[0].id, { image: wm_fatih, caption: A17textddfq})
       }
      })
 
@@ -134,13 +133,13 @@ Akashi.ev.on('group-participants.update', async (anu) => {
                 try {
                     ppuser = await Akashi.profilePictureUrl(num, 'image')
                 } catch {
-                    ppuser = 'https://wallpapercave.com/wp/wp9260247.jpg'
+                    ppuser = 'https://wallpapercave.com/wp/wp11599837.jpg'
                 }
 
                 try {
                     ppgroup = await Akashi.profilePictureUrl(anu.id, 'image')
                 } catch {
-                    ppgroup = 'https://telegra.ph/file/4cc2712eee93c105f6739.jpg'
+                    ppgroup = 'https://wallpapercave.com/wp/wp11599837.jpg'
                 }
 
                 let targetname = await Akashi.getName(num)
@@ -149,10 +148,10 @@ Akashi.ev.on('group-participants.update', async (anu) => {
             
                 if (anu.action == 'add') {
                 let WAuserName = num
-                Akashitext = `
-يا مرحبا @${WAuserName.split("@")[0]},
+                A17text = `
+مرحبا يالطيب  @${WAuserName.split("@")[0]},
 
-نورتنا ف نقابة  ${metadata.subject}.
+نورتنا في نقابة :  ${metadata.subject}.
 
 
 ${metadata.desc}
@@ -161,15 +160,15 @@ ${metadata.desc}
     let buttonMessage = {
     image: await getBuffer(ppuser),
     mentions: [num],
-    caption: Akashitext,
+    caption: A17text,
     footer: `${global.BotName}`,
     headerType: 4,
     }
 Akashi.sendMessage(anu.id, buttonMessage)
                 } else if (anu.action == 'remove') {
                 	let WAuserName = num
-                    Akashitext = `
-سايونارا يالطيب  👋, @${WAuserName.split("@")[0]},
+                    A17text = `
+ مع السلامة يا الطيب , @${WAuserName.split("@")[0]},
 
 
 `
@@ -177,7 +176,7 @@ Akashi.sendMessage(anu.id, buttonMessage)
     let buttonMessage = {
 	image:await getBuffer(ppuser),
     mentions: [num],
-    caption: Akashitext,
+    caption: A17text,
     footer: `${global.BotName}`,
     headerType: 4,
     
@@ -253,31 +252,28 @@ Akashi.sendMessage(anu.id, buttonMessage)
     }
 	
     Akashi.public = true
-	
-    Akashi.ev.on('creds.update', saveState)
 
     Akashi.serializeM = (m) => smsg(Akashi, m, store)
-	
 
     Akashi.ev.on('connection.update', async (update) => {
         const { connection, lastDisconnect } = update	    
         if (connection === 'close') {
-        let reason = new Boom(lastDisconnect?.error)?.output.statusCode
+        let reason = lastDisconnect.error ? lastDisconnect?.error?.output.statusCode : 0;
             if (reason === DisconnectReason.badSession) { console.log(`Bad Session File, Please Delete Session and Scan Again`); process.exit(); }
-            else if (reason === DisconnectReason.connectionClosed) { console.log("Connection closed, reconnecting...."); startAkashi(); }
-            else if (reason === DisconnectReason.connectionLost) { console.log("Connection Lost from Server, reconnecting..."); startAkashi(); }
+            else if (reason === DisconnectReason.connectionClosed) { console.log("Connection closed, reconnecting...."); startA17(); }
+            else if (reason === DisconnectReason.connectionLost) { console.log("Connection Lost from Server, reconnecting..."); startA17(); }
             else if (reason === DisconnectReason.connectionReplaced) { console.log("Connection Replaced, Another New Session Opened, Please Close Current Session First"); process.exit(); }
             else if (reason === DisconnectReason.loggedOut) { console.log(`Device Logged Out, Please Delete Session and Scan Again.`); process.exit(); }
-            else if (reason === DisconnectReason.restartRequired) { console.log("Restart Required, Restarting..."); startAkashi(); }
-            else if (reason === DisconnectReason.timedOut) { console.log("Connection TimedOut, Reconnecting..."); startAkashi(); }
+            else if (reason === DisconnectReason.restartRequired) { console.log("Restart Required, Restarting..."); startA17(); }
+            else if (reason === DisconnectReason.timedOut) { console.log("Connection TimedOut, Reconnecting..."); startA17(); }
             else { console.log(`Unknown DisconnectReason: ${reason}|${connection}`) }
         }
         //console.log('Connected...', update)
     })
 
-    	
-	
-	
+    Akashi.ev.on('creds.update', saveState)
+
+
    
     /** Send Button 5 Images
      *
@@ -661,7 +657,7 @@ Akashi.sendMessage(anu.id, buttonMessage)
     return Akashi
 }
 
-startAkashi()
+startA17()
 
 
 let file = require.resolve(__filename)
