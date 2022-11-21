@@ -3293,8 +3293,8 @@ case 'مقطع': case 'play333': {
  let search = await yts(text)
  let anu = search.videos[0]
  let buttons = [
- {buttonId: `${prefix}ytmp3 ${text}`, buttonText: {displayText: '♫ لصوت'}, type: 1},
- {buttonId: `${prefix}ytmp4 ${text}`, buttonText: {displayText: '► لفيديو'}, type: 1}
+ {buttonId: `${prefix}ytad ${text}`, buttonText: {displayText: '♫ لصوت'}, type: 1},
+ {buttonId: `${prefix}ytvd ${text}`, buttonText: {displayText: '► لفيديو'}, type: 1}
 
  ]
  let buttonMessage = {
@@ -3317,7 +3317,7 @@ case 'مقطع': case 'play333': {
  }
  break
 
- case 'ytadddd': {
+ case 'ytad': {
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     const YT=require('./lib/ytdlcore')
@@ -3327,13 +3327,13 @@ case 'مقطع': case 'play333': {
     const ytmp3play = await YT.mp3(anu.url)
     let stats = fs.statSync(ytmp3play.path)
     let fileSizeInBytes = stats.size;
-    if (fileSizeInBytes > 60000000) return reply('Cant send audios longer than 60 MB!')
+    if (fileSizeInBytes > 60000000) return reply('لا يمكن ارسال صوتية اكتر من 60 ميغا')
     
  await Akashi.sendMessage(from, {document: fs.readFileSync(ytmp3play.path),fileName: anu.title + '.mp3',mimetype: 'audio/mpeg',}, {quoted:m})
  }
  break
 
- case 'ytv333d': {
+ case 'ytvd': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  const YT=require('./lib/ytdlcore')
@@ -3342,7 +3342,7 @@ case 'مقطع': case 'play333': {
     let anu = search.videos[0]
     const ytmp4play = await YT.mp4(anu.url)
     let vidduration =ytmp4play.duration;
-    if (vidduration > 1800) return reply('Cant send videos longer than *30 min*')
+    if (vidduration > 1800) return reply('لا يمكن ارسال فيديو اكتر من نص ساعه*')
  Akashi.sendMessage(from, {video:{url:ytmp4play.videoUrl}, mimetype:"video/mp4", caption:anu.title+' By *Akashi MD*',}, {quoted:m})
  }
  break
@@ -3360,7 +3360,7 @@ case 'مقطع': case 'play333': {
  let search = await yts(text)
  let anu = search.videos[0]
  let buttons = [
- {buttonId: `${prefix}ytmp3 ${text}`, buttonText: {displayText: '♫ صوتية'}, type: 1},
+ {buttonId: `${prefix}ytad2 ${text}`, buttonText: {displayText: '♫ صوتية'}, type: 1},
  {buttonId: `${prefix}ytvd2 ${text}`, buttonText: {displayText: '► فيديو'}, type: 1}
 
  ]
@@ -3394,7 +3394,7 @@ case 'مقطع': case 'play333': {
     let fileSizeInBytes = stats.size;
     if (fileSizeInBytes > 60000000) return reply('Cant send audios longer than 60 MB!')
     
- await Akashi.sendMessage(from, {document: fs.readFileSync(ytmp3play2.path),fileName:'YTmp3_Downloader.mp3',mimetype: 'audio/mpeg',}, {quoted:m})
+ await Akashi.sendMessage(from, {document: fs.readFileSync(ytmp3play2.path),fileName:'Akashi_downloader.mp3',mimetype: 'audio/mpeg',}, {quoted:m})
  }
  break
 
