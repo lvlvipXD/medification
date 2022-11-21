@@ -2461,7 +2461,7 @@ let mentioned = participants.map(v => v.jid)
 
 
 
-    case 'nowa':  case 'stalk': case 'stalknumber':{
+    case 'nowييييييa':  case 'staيييييييlk': case 'stalknسييييييumber':{
         if (isBan) return reply(mess.banned)
         if (!args[0]) return reply(`Use command like: ${prefix}stalk <number>xxx`)
         var inputnumber = args[0]
@@ -3293,8 +3293,8 @@ case 'مقطع': case 'play333': {
  let search = await yts(text)
  let anu = search.videos[0]
  let buttons = [
- {buttonId: `${prefix}لصوت ${text}`, buttonText: {displayText: '♫ لصوت'}, type: 1},
- {buttonId: `${prefix}لفيديو ${text}`, buttonText: {displayText: '► لفيديو'}, type: 1}
+ {buttonId: `${prefix}ytmp3 ${text}`, buttonText: {displayText: '♫ لصوت'}, type: 1},
+ {buttonId: `${prefix}ytmp4 ${text}`, buttonText: {displayText: '► لفيديو'}, type: 1}
 
  ]
  let buttonMessage = {
@@ -3360,7 +3360,7 @@ case 'مقطع': case 'play333': {
  let search = await yts(text)
  let anu = search.videos[0]
  let buttons = [
- {buttonId: `${prefix}ytad2 ${text}`, buttonText: {displayText: '♫ صوتية'}, type: 1},
+ {buttonId: `${prefix}ytmp3 ${text}`, buttonText: {displayText: '♫ صوتية'}, type: 1},
  {buttonId: `${prefix}ytvd2 ${text}`, buttonText: {displayText: '► فيديو'}, type: 1}
 
  ]
@@ -4164,7 +4164,7 @@ break
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-case 'بكاء':  case 'handhold':{
+case 'cry':  case 'handhold':{
 
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
@@ -4238,7 +4238,7 @@ console.log(musers)
 }
 break
 
-case 'عناق':{
+case 'hug':{
 
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
@@ -4276,7 +4276,7 @@ console.log(musers)
 break
 
 
-case 'رقص':{
+case 'dance':{
 
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
@@ -4313,7 +4313,7 @@ console.log(musers)
 }
 break
 
-case 'قتل': case 'pat': case 'bite':
+case 'kill': case 'pat': case 'bite':
 case 'bully': case 'bonk': case 'poke': case 'صفع':
 case 'happy':
 case 'cuddle': case 'kick':{
@@ -4862,9 +4862,6 @@ case 'اوامر':{
 •∆البوت ينطق اي شي تكتبه (انجليزي)
 
 ⋄═──═◞🔍 قائمة البحث 🔎◟━──━⋄
-
-•∆ -مقطع
-•∆ البحث عن مقطع أغنية 
  
 •∆ -فلم
 •∆ البحث عن معلومات فلم 
@@ -4952,7 +4949,7 @@ case '':
  const needhelpmenu = `هلا حبااايب , ادا احتجت قائمة الاوامر مع شرحها اكتب -اوامر\n\n سيتم كل فترة تحديث الاوامر حسب طلباتكم\n\n حياكم الله جميعا  .`
      
          let butRun = [
-                {buttonId: `${prefix}help`, buttonText: {displayText: 'Help'}, type: 1}
+                {buttonId: `حسنا`, buttonText: {displayText: 'حسنا'}, type: 1}
                 ]
                 let buttonMessage = {
                     video:fs.readFileSync('./system/Akashi.mp4'),gifPlayback:true,
