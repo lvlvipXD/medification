@@ -3562,14 +3562,14 @@ await Akashi.sendButtonText(m.chat, buttons, jawab, Akashi.user.name, m, {mentio
 }
 break
 
-case 'سولميت': {
+case 'شبيهي': {
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
 if (!m.isGroup) return replay(`${mess.grouponly}`)
 let member = participants.map(u => u.id)
 let me = m.sender
 let jodoh = member[Math.floor(Math.random() * member.length)]
-let jawab = `توأم روحي هو
+let jawab = `شبيهك هو :
 @${me.split('@')[0]} ❤️ @${jodoh.split('@')[0]}`
 let ments = [me, jodoh]
 let buttons = [
@@ -4839,8 +4839,8 @@ case 'اوامر':{
 •∆ -حجر_ورق
 •∆ غير متوفر حاليا
  
-•∆ -سولميت
-•∆ البوت يجيبلك توأم روحك (للمزح)
+•∆ -شبيهي
+•∆ البوت يجيبلك شبيهي (للمزح)
  
 •∆ -احسب
 •∆ البوت يحل عملية حسابية 
