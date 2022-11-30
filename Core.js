@@ -1555,11 +1555,11 @@ const random=pages[Math.floor(Math.random() * pages.length)]
         const i = Math.floor(Math.random() * wallpaper.length);
 		
 let buttons = [
-            {buttonId: `${prefix}wallpaper ${args.join(" ")}`, buttonText: {displayText: '>>'}, type: 1}
+            {buttonId: `${prefix}خلفية ${args.join(" ")}`, buttonText: {displayText: 'التالي'}, type: 1}
         ]
         let buttonMessage = {
             image: {url:wallpaper[i].image},
-            caption: `*Search term:* ${q}`,
+            caption: `*البحث عن:* ${q}`,
             footer: `${BotName}`,
             buttons: buttons,
             headerType: 4
@@ -2887,6 +2887,9 @@ case 'togifff': case 'غيف':{
  await fs.unlinkSync(media)
  }
  break
+ case 'منشني': {
+   Akashi.sendMessage(from, {text: `@${pushname.split('@')[0]}`, }, {quoted:m}) }
+    break
 
 
  case 'المطور': {
@@ -2914,7 +2917,7 @@ gis(args.join(" "), async (error, result) => {
 n = result
 images = n[Math.floor(Math.random() * n.length)].url
 let buttons = [
-{buttonId: `${prefix}gimage ${args.join(" ")}`, buttonText: {displayText: '>>'}, type: 1}
+{buttonId: `${prefix}صورة ${args.join(" ")}`, buttonText: {displayText: 'التالي'}, type: 1}
 ]
 let buttonMessage = {
 image: { url: images },
