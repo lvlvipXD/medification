@@ -33,7 +33,7 @@ console.log(color('\nYou can follow me on GitHub: Kai0071','aqua'))
     const Akashi = A17Connect({
         logger: pino({ level: 'silent' }),
         printQRInTerminal: true,
-        browser: ['Akashi by: Kai','Safari','1.0.0'],
+        browser: ['Akashi by: Kai','chro','1.0.0'],
         auth: state,
         version
     })
