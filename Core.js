@@ -3435,7 +3435,7 @@ case 'بنتر': {
  hx.pinterest(args.join(" ")).then(async(res) => {
  imgnyee = res[Math.floor(Math.random() * res.length)]
  let buttons = [
- {buttonId: `${prefix}pinterest ${args.join(" ")}`, buttonText: {displayText: '>>'}, type: 1}
+ {buttonId: `${prefix}بنتر ${args.join(" ")}`, buttonText: {displayText: 'التالي'}, type: 1}
  ]
  let buttonMessage = {
  image: { url: imgnyee },
@@ -3618,7 +3618,7 @@ case 'هل':
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
 					if (!text) return replay(` متال هل انا محنك`)
-					const Akashitttt =['شدراني انا','معرفش','تقصد نفسك','لا','حصل','نعم','صح','شدخلني','دز','ون بيس عمك','حصل','محصلش','دا عمك','ادلف انتا و هو','صادق','ايوة بالضبط كدا','يبب']
+					const Akashitttt =['شدراني انا','معرفش','تقصد نفسك','لا','حصل','نعم','صح','شدخلني','دز','اتفق الف','حصل','العالم كلو متفق معك','انا معك ف دي','ياخي صدعتني','انقلع','ادا انتا بتشوف كدا ف يب','يعني ممكن نقول ايوا صح','الصراحة معك حق','انتا ادرى في الامور دي','محصلش','دا عمك','ادلف انتا و هو','صادق','ايوة بالضبط كدا','يبب']
 					const taky = Akashitttt[Math.floor(Math.random() * Akashitttt.length)]
 					Akashi.sendMessage(from, { text: `هل : ${q}\nالجواب : *${taky}*` }, { quoted: m })
 				     break
@@ -3626,7 +3626,7 @@ case 'مهنتي':
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
 				
-					const Akashitttty =['متسول الله يشوف من حالك','رجل اعمال حرامي','حرامي','تافه','ماكدو','ليفرور','تاكسي','فيلسوف قد ما تتفلسف عالفاضي','سائق توك توك','مرتزقة','تاجر مخدرات','عاطل عن العمل','بيطري','مانجاكا','محامي','معلم','محنك ','راقص']
+					const Akashitttty =['متسول الله يشوف من حالك','رجل اعمال حرامي','حرامي','تافه','طاهي','دلفري','تاكسي','فيلسوف قد ما تتفلسف عالفاضي','مبرمج','سائق توك توك','مرتزقة','تاجر مخدرات','عاطل عن العمل','بيطري','مانجاكا','محامي','معلم','محنك ','راقص']
 					const takyy = Akashitttty[Math.floor(Math.random() * Akashitttty.length)]
 					Akashi.sendMessage(from, { text: `وظيفتك ${q}\nالجواب : *${takyy}*` }, { quoted: m })
 				     break
@@ -3634,7 +3634,7 @@ case 'شبيهي':
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
 				
-					const Akashittttyj =['اللمبي','ال باتشينو','تيريون لانيستر','ديمون تارغاريان','اكاشي','لوفي','جيمي لانستر','ديكابريو','جون سنو','عادل امام','حديدان ههه ','توم هاردي','محمد صلاح ','محمد رمضان ','توماس شيلبي ','بروس لي ','اللمبي ','الجوكر','سول','توني ستارك','سيلفيستر ستالون','جاكي شان']
+					const Akashittttyj =['اللمبي','ال باتشينو','تيريون لانيستر','ديمون تارغاريان','اكاشي','لوفي','جيمي لانستر','ديكابريو','جون سنو','عادل امام','حديدان ههه','توم هاردي','محمد صلاح','محمد رمضان','توماس شيلبي ','بروس لي','اللمبي','وجهك مربع ما تشبه لحد','وجهك مربع ما تشبه لحد','وجهك مربع ما تشبه لحد','الجوكر','سول','مبابي','الدون','ميسي','ليفا','نيمار','توني ستارك','سيلفيستر ستالون','جاكي شان']
 					const takyyj = Akashittttyj[Math.floor(Math.random() * Akashittttyj.length)]
 					Akashi.sendMessage(from, { text: `شبيهي من المشاهير ${q}\nالجواب : *${takyyj}*` }, { quoted: m })
 				     break
@@ -4968,6 +4968,7 @@ break
 
 
 case '':
+    if(isCmd){
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
 
@@ -4990,7 +4991,7 @@ const Akashiarray= [
             "https://c.tenor.com/4RH_f9juJcoAAAPo/house-of.mp4" 
             
             ]
-        
+        }
             const Akashiselection = Akashiarray[Math.floor(Math.random()*Akashiarray.length)]
         
             Akashi.sendMessage(from,{video:{url:Akashiselection},gifPlayback:true,caption:txt},{quoted:m})
