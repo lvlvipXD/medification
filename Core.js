@@ -3458,7 +3458,7 @@ case 'بنتر': {
 case 'ملصقي':{
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
-if (!args.join(" ")) return reply(`Use command: -ملصقي senpai|By: akashi`)
+if (!args.join(" ")) return reply(`مثال : -ملصقي اكاشي`)
 const swn = args.join(" ")
 const pcknm = swn.split("|")[0];
 const atnm = swn.split("|")[1];
@@ -4941,7 +4941,7 @@ case 'اوامر':{
 break
  
 
-case '':
+case 'سيسيسي':
     if(isCmd){
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
@@ -4967,7 +4967,7 @@ break
 
 
 
-case 'senpai':
+case '':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
 
