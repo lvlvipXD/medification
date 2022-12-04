@@ -4837,6 +4837,9 @@ case 'اوامر':{
 •∆ -شبيهي
 •∆ ابحث عن شبيهك  من المشاهير
  
+•∆ -احزر
+•∆ احزر شخصية الانمي
+ 
 ⋄═──═◞🎮 قائمة الالعاب 🎮◟━──━⋄
 
 •∆ -حجر_ورق
@@ -4941,39 +4944,113 @@ case 'اوامر':{
 break
  
 
-case 'سيسيسي':
-    if(isCmd){
-    if (isBan) return reply(mess.banned)	 			
-    if (isBanChat) return reply(mess.bangc)
-
-      Akashipic ='https://wallpapercave.com/wp/wp9260247.jpg'
-    
-        
- const needhelpmenu = `هلا حبااايب , ادا احتجت قائمة الاوامر مع شرحها اكتب -اوامر\n\n سيتم كل فترة تحديث الاوامر حسب طلباتكم\n\n حياكم الله جميعا  .`
-     
-         let butRun = [
-                {buttonId: `حسنا`, buttonText: {displayText: 'حسنا'}, type: 1}
-                ]
-                let buttonMessage = {
-                    video:fs.readFileSync('./system/Akashi.mp4'),gifPlayback:true,
-                    caption: needhelpmenu,
-                    footer: `${global.BotName}`,
-                    buttons: butRun,
-                    headerType: 4
-                }
-            Akashi.sendMessage(m.chat,buttonMessage,{quoted:m})
-                }
-break
-
-
-
 case '':
     if(isCmd){
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
 
-const txt = `هلا حبااايب , ادا احتجت قائمة الاوامر مع شرحها اكتب -اوامر\n\n سيتم كل فترة تحديث الاوامر حسب طلباتكم\n\n حياكم الله جميعا.`
 const Akashiarray= [
+            "https://c.tenor.com/-I1NoJDSREAAAAPo/game-of-thrones-ghost.mp4",
+            "https://c.tenor.com/fcV_Ig0ifxcAAAPo/pain-shira-tensei.mp4",
+            "https://c.tenor.com/HC3Bzmutw84AAAAC/got-game.mp4",
+            "https://c.tenor.com/ez3hYVlhwdsAAAPo/syrax-rhaenyra-targaryen.mp4",
+            "https://c.tenor.com/4dR1Pax6xZMAAAPo/jon-snow.mp4",
+            "https://c.tenor.com/3YMU9S0x8FQAAAPo/regalt-got.mp4",
+            "https://c.tenor.com/i6Ta8q3j0DQAAAPo/game-of.mp4",
+            "https://c.tenor.com/Zd4ZWaBl61YAAAPo/jon-snow-kit-harington.mp4",
+            "https://c.tenor.com/6ZhzHHYyNxoAAAPo/luffy.mp4",
+            "https://c.tenor.com/mgBTkU7wsj8AAAPo/kuromomo-kuroko-tetsuya.mp4",
+            "https://c.tenor.com/A2ZT_pHA1yQAAAPo/nightking-got.mp4",
+            "https://c.tenor.com/u-JRRAwUdokAAAPo/naruto-shippuden-anime.mp4",
+            "https://c.tenor.com/9gfpFXcHwnYAAAPo/madara.mp4",
+            "https://c.tenor.com/plU4BsTNAbYAAAPo/djdj.mp4",
+            "https://c.tenor.com/KMWlhP9n8dYAAAPo/tsunade-summoning-jutsu.mp4" 
+            
+            ]
+    
+        
+const txt = `*السلام عليكم*\n\n*للحصول على قائمة الاوامر اكتب: -اوامر*\n\n*ادا وجد اي خطأ او  عندك افكار تريد اضافتها للبوت كلم المطور*\n\n*بالتوفيق*`
+     
+const Akashiselection = Akashiarray[Math.floor(Math.random()*Akashiarray.length)]
+        
+            Akashi.sendMessage(from,{video:{url:Akashiselection},gifPlayback:true,caption:txt},{quoted:m})
+            }
+
+    break
+case 'احزر':
+    if(isCmd){
+    if (isBan) return reply(mess.banned)	 			
+    if (isBanChat) return reply(mess.bangc)
+
+const Akashiarrray= [
+            "https://wallpapercave.com/uwp/uwp642900.jpeg",
+"https://wallpapercave.com/wp/wp5684445.jpg",
+"https://wallpapercave.com/uwp/uwp2955192.jpeg",
+"https://wallpapercave.com/uwp/uwp655176.png",
+"https://wallpapercave.com/wp/wp5128377.jpg",
+"https://wallpapercave.com/wp/wp3204786.jpg",
+"https://wallpapercave.com/uwp/uwp1082433.png",
+"https://wallpapercave.com/uwp/uwp1070741.jpeg",
+"https://wallpapercave.com/uwp/uwp1070766.png",
+"https://wallpapercave.com/uwp/uwp1070818.png",
+"https://wallpapercave.com/uwp/uwp1070787.png",
+"https://wallpapercave.com/uwp/uwp2421089.png",
+"https://wallpapercave.com/uwp/uwp1855187.png",
+"https://wallpapercave.com/uwp/uwp2060319.jpeg",
+"https://wallpapercave.com/uwp/uwp1868516.jpeg",
+"https://wallpapercave.com/uwp/uwp1902953.jpeg",
+"https://wallpapercave.com/uwp/uwp2708315.jpeg",
+"https://wallpapercave.com/wp/wp5015702.jpg",
+"https://wallpapercave.com/wp/wp7115580.jpg",
+"https://wallpapercave.com/uwp/uwp988880.webp",
+"https://wallpapercave.com/uwp/uwp576787.png",
+"https://wallpapercave.com/uwp/uwp576757.jpeg",
+"https://wallpapercave.com/uwp/uwp888974.jpeg",
+"https://wallpapercave.com/uwp/uwp1388447.jpeg",
+"https://wallpapercave.com/uwp/uwp1737486.jpeg",
+"https://wallpapercave.com/uwp/uwp1737487.jpeg",
+"https://wallpapercave.com/uwp/uwp1729622.jpeg",
+"https://wallpapercave.com/dwp1x/wp4030246.jpg",
+"https://wallpapercave.com/uwp/uwp923295.jpeg",
+"https://wallpapercave.com/uwp/uwp1899150.jpeg",
+"https://wallpapercave.com/dwp1x/wp4361556.png",
+"https://wallpapercave.com/dwp1x/wp11512803.png",
+"https://wallpapercave.com/wp/wp8788708.jpg",
+"https://wallpapercave.com/dwp1x/wp11167224.jpg",
+"https://wallpapercave.com/dwp1x/wp11085768.jpg",
+"https://wallpapercave.com/dwp1x/wp1844238.jpg",
+"https://wallpapercave.com/dwp1x/wp2339747.jpg",
+"https://wallpapercave.com/uwp/uwp2158990.jpeg",
+"https://wallpapercave.com/dwp1x/wp4240625.jpg",
+"https://wallpapercave.com/dwp1x/wp9717543.jpg",
+"https://wallpapercave.com/dwp1x/wp9967344.png",
+"https://wallpapercave.com/dwp1x/wp5040684.png",
+"https://wallpapercave.com/wp/wp8989128.jpg",
+"https://wallpapercave.com/dwp1x/wp10958341.jpg",
+"https://wallpapercave.com/dwp1x/wp4950054.jpg",
+"https://wallpapercave.com/dwp1x/iA3VdmD.jpg",
+"https://wallpapercave.com/dwp1x/wp2265067.jpg"
+            
+            ]
+    
+        
+const txt = `*احزر اسم الشخصية*`
+     
+const Akashiselection = Akashiarrray[Math.floor(Math.random()*Akashiarrray.length)]
+        
+            Akashi.sendMessage(from,{image:{url:Akashiselection},gifPlayback:true,caption:txt},{quoted:m})
+            }
+
+    break
+
+
+ case 'dfgfgfg':
+    if(isCmd){
+    if (isBan) return reply(mess.banned)	 			
+    if (isBanChat) return reply(mess.bangc)
+
+const txt = `هلا حبااايب , ادا احتجت قائمة الاوامر مع شرحها اكتب -اوامر\n\n سيتم كل فترة تحديث الاوامر حسب طلباتكم\n\n حياكم الله جميعا.`
+const Akashiarrrrray= [
             "https://c.tenor.com/-I1NoJDSREAAAAPo/game-of-thrones-ghost.mp4",
             "https://c.tenor.com/Z6uXsgT3sdoAAAPo/rhaenyra-targaryen.mp4",
             "https://c.tenor.com/HC3Bzmutw84AAAAC/got-game.mp4",
@@ -4991,11 +5068,11 @@ const Akashiarray= [
             "https://c.tenor.com/4RH_f9juJcoAAAPo/house-of.mp4" 
             
             ]
-        }
-            const Akashiselection = Akashiarray[Math.floor(Math.random()*Akashiarray.length)]
+        
+            const Akashiselection = Akashiarrrrray[Math.floor(Math.random()*Akashiarrrrray.length)]
         
             Akashi.sendMessage(from,{video:{url:Akashiselection},gifPlayback:true,caption:txt},{quoted:m})
-
+            }
 break
 
 case 'ادد':{     			
