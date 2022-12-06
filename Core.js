@@ -971,8 +971,8 @@ this.game = this.game ? this.game : {}
     Typed *surrender* to surrender and admited defeat`
             if ((room.game._currentTurn ^ isSurrender ? room.x : room.o) !== m.chat)
             room[room.game._currentTurn ^ isSurrender ? 'x' : 'o'] = m.chat
-            if (room.x !== room.o) await A17.sendText(room.x, str, m, { mentions: parseMention(str) } )
-            await A17.sendText(room.o, str, m, { mentions: parseMention(str) } )
+            if (room.x !== room.o) await Akashi.sendText(room.x, str, m, { mentions: parseMention(str) } )
+            await Akashi.sendText(room.o, str, m, { mentions: parseMention(str) } )
             if (isTie || isWin) {
             delete this.game[room.id]
             }
@@ -2462,7 +2462,7 @@ if (isBanChat) return reply(mess.bangc)
  }
  break
 
-case 'ttc': case 'ttt': case 'tictactoe': {
+case 'ttc': case 'ttt': case 'اكس_او': {
     if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
     let TicTacToe = require("./lib/tictactoe")
@@ -2495,8 +2495,8 @@ ${arr.slice(3, 6).join('')}
 ${arr.slice(6).join('')}
 Waiting @${room.game.currentTurn.split('@')[0]}
 Type *surrender* to surrender and admit defeat`
-    if (room.x !== room.o) await A17.sendText(room.x, str, m, { mentions: parseMention(str) } )
-    await   A17.sendText(room.o, str, m, { mentions: parseMention(str) } )
+    if (room.x !== room.o) await Akashi.sendText(room.x, str, m, { mentions: parseMention(str) } )
+    await   Akashi.sendText(room.o, str, m, { mentions: parseMention(str) } )
     } else {
     room = {
     id: 'tictactoe-' + (+new Date),
