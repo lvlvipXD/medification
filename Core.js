@@ -915,6 +915,68 @@ if (!m.key.fromMe) return
 setInterval(() => {
 fs.writeFileSync('./src/database.json', JSON.stringify(global.db, null, 2))
 }, 60 * 1000)
+	
+//tictactoc
+this.game = this.game ? this.game : {}
+            let room = Object.values(this.game).find(room => room.id && room.game && room.state && room.id.startsWith('tictactoe') && [room.game.playerX, room.game.playerO].includes(m.sender) && room.state == 'PLAYING')
+            if (room) {
+            let ok
+            let isWin = !1
+            let isTie = !1
+            let isSurrender = !1
+            //reply(`[DEBUG]\n${parseInt(m.text)}`)
+            if (!/^([1-9]|(me)?give up|surr?ender|off|skip)$/i.test(m.text)) return
+            isSurrender = !/^[1-9]$/.test(m.text)
+            if (m.sender !== room.game.currentTurn) { 
+            if (!isSurrender) return !0
+            }
+            if (!isSurrender && 1 > (ok = room.game.turn(m.sender === room.game.playerO, parseInt(m.text) - 1))) {
+            reply({
+            '-3': 'Game Has Ended',
+            '-2': 'Invalid',
+            '-1': 'Invalid Position',
+            0: 'Invalid Position',
+            }[ok])
+            return !0
+            }
+            if (m.sender === room.game.winner) isWin = true
+            else if (room.game.board === 511) isTie = true
+            let arr = room.game.render().map(v => {
+            return {
+            X: '❌',
+            O: '⭕',
+            1: '1️⃣',
+            2: '2️⃣',
+            3: '3️⃣',
+            4: '4️⃣',
+            5: '5️⃣',
+            6: '6️⃣',
+            7: '7️⃣',
+            8: '8️⃣',
+            9: '9️⃣',
+            }[v]
+            })
+            if (isSurrender) {
+            room.game._currentTurn = m.sender === room.game.playerX
+            isWin = true
+            }
+            let winner = isSurrender ? room.game.currentTurn : room.game.winner
+            let str = `Room ID: ${room.id}
+    ${arr.slice(0, 3).join('')}
+    ${arr.slice(3, 6).join('')}
+    ${arr.slice(6).join('')}
+    ${isWin ? `@${winner.split('@')[0]} Won!` : isTie ? `Game Over` : `Turn ${['❌', '⭕'][1 * room.game._currentTurn]} (@${room.game.currentTurn.split('@')[0]})`}
+    ❌: @${room.game.playerX.split('@')[0]}
+    ⭕: @${room.game.playerO.split('@')[0]}
+    Typed *surrender* to surrender and admited defeat`
+            if ((room.game._currentTurn ^ isSurrender ? room.x : room.o) !== m.chat)
+            room[room.game._currentTurn ^ isSurrender ? 'x' : 'o'] = m.chat
+            if (room.x !== room.o) await A17.sendText(room.x, str, m, { mentions: parseMention(str) } )
+            await A17.sendText(room.o, str, m, { mentions: parseMention(str) } )
+            if (isTie || isWin) {
+            delete this.game[room.id]
+            }
+            }
 
 // reset limit every 12 hours
 let cron = require('node-cron')
