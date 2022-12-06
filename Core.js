@@ -925,7 +925,7 @@ this.game = this.game ? this.game : {}
             let isTie = !1
             let isSurrender = !1
             //reply(`[DEBUG]\n${parseInt(m.text)}`)
-            if (!/^([1-9]|(me)?give up|surr?ender|off|skip)$/i.test(m.text)) return
+            if (!/^([1-9]|(me)?استسلام|surr?ender|off|skip)$/i.test(m.text)) return
             isSurrender = !/^[1-9]$/.test(m.text)
             if (m.sender !== room.game.currentTurn) { 
             if (!isSurrender) return !0
@@ -965,10 +965,10 @@ this.game = this.game ? this.game : {}
     ${arr.slice(0, 3).join('')}
     ${arr.slice(3, 6).join('')}
     ${arr.slice(6).join('')}
-    ${isWin ? `@${winner.split('@')[0]} Won!` : isTie ? `Game Over` : `Turn ${['❌', '⭕'][1 * room.game._currentTurn]} (@${room.game.currentTurn.split('@')[0]})`}
+    ${isWin ? `@${winner.split('@')[0]} فائز!` : isTie ? `Game over` : `دورك ${['❌', '⭕'][1 * room.game._currentTurn]} (@${room.game.currentTurn.split('@')[0]})`}
     ❌: @${room.game.playerX.split('@')[0]}
     ⭕: @${room.game.playerO.split('@')[0]}
-    Typed *surrender* to surrender and admited defeat`
+    اكتب *استسلام* لمغادرة اللعبة`
             if ((room.game._currentTurn ^ isSurrender ? room.x : room.o) !== m.chat)
             room[room.game._currentTurn ^ isSurrender ? 'x' : 'o'] = m.chat
             if (room.x !== room.o) await Akashi.sendText(room.x, str, m, { mentions: parseMention(str) } )
@@ -4956,8 +4956,8 @@ case 'اوامر':{
  
 ⋄═──═◞🎮 قائمة الالعاب 🎮◟━──━⋄
 
-•∆ -حجر_ورق
-•∆ غير متوفر حاليا
+•∆ -اكس_او
+•∆ نافس صديقك ب اكس او
  
 •∆ -سولميت
 •∆ البوت يجيب لك توأم روحك (للمزح)
