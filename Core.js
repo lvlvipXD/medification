@@ -3400,13 +3400,11 @@ break
               
 
 case 'مقطع': case 'play333': {
-    if (isBan) return reply(mess.banned)	 			
+ if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
-	if (!isAdmins && !isCreator) return replay(mess.useradmin)
+ if (!isAdmins && !isCreator) return replay(mess.useradmin)
  const YT=require('./lib/ytdlcore')
-
  const { isUrl, fetchBuffer } = require('./lib/Function')
-
  if(!text) return Akashi.sendMessage(from,{text:"اكتب اسم المقطع او اجلب الرابط"},{quoted:m})
  let yts = require("yt-search")
  let search = await yts(text)
