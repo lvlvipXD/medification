@@ -355,15 +355,15 @@ const addCooldown = (userId) => {
 }
 
 var levelRole = getLevelingLevel(m.sender)
-        var role = 'نحاسي 5'
+        var role = ' اسطورة'
         if (levelRole <= 5) {
-            role = 'نحاسي 4'
+            role = ' عمكم'
         } else if (levelRole <= 10) {
-            role = 'نحاسي 3'
+            role = ' رهييب'
         } else if (levelRole <= 15) {
-            role = 'نحاسي 2'
+            role = ' عم الكل'
         } else if (levelRole <= 20) {
-            role = 'نحاسي 1'
+            role = ' قاهرهم'
         } else if (levelRole <= 25) {
             role = 'فضي 5'
         } else if (levelRole <= 30) {
@@ -399,15 +399,15 @@ var levelRole = getLevelingLevel(m.sender)
         }
 
         var levelRoles = getLevelingLevel(m.sender)
-        var roles = 'نحاس 5'
+        var roles = ' اسطورة'
         if (levelRoles <= 5) {
-            roles = 'نحاس 4'
+            roles = ' عمكم'
         } else if (levelRoles <= 10) {
-            roles = 'نحاس 3'
+            roles = ' رهيب'
         } else if (levelRoles <= 15) {
-            roles = 'نحاس 2'
+            roles = ' عم الكل'
         } else if (levelRoles <= 20) {
-            roles = 'نحاس 1'
+            roles = ' قاهرهم'
         } else if (levelRoles <= 25) {
             roles = 'فضة V'
         } else if (levelRoles <= 30) {
@@ -695,17 +695,17 @@ if (!afkTime || afkTime < 0) continue
 let reason = user.afkReason || ''
 reply(`
 لا تمنشنو تاني هو مش هنا!
-هو مش هنا بسبب  ${reason ? 'السبب ' + reason : 'لا يوجد'}
-During ${clockString(new Date - afkTime)}
+  ${reason ? 'السبب ' + reason : 'لا يوجد'}
+منذ ${clockString(new Date - afkTime)}
 `.trim())
 }
 
 if (db.users[m.sender].afkTime > -1) {
 let user = global.db.users[m.sender]
 reply(`
-Pls try not to tag him!
-He's Offline ${user.afkReason ? ' after ' + user.afkReason : ''}
-During ${clockString(new Date - user.afkTime)}
+لا تمنشنو تاني
+هو اوفلاين ${user.afkReason ? ' after ' + user.afkReason : ''}
+منذ ${clockString(new Date - user.afkTime)}
 `.trim())
 user.afkTime = -1
 user.afkReason = ''
@@ -721,9 +721,9 @@ sendOrder(m.chat, teks, "5123658817728409", fs.readFileSync('./Assets/pic10.jpg'
 if (AntiLink) {
     linkgce = await Akashi.groupInviteCode(from)
     if (budy.includes(`https://chat.whatsapp.com/${linkgce}`)) {
-    reply(`\`\`\`「  Antilink System  」\`\`\`\n\nNo action will be because you sent this group's link.`)
+    reply(`\`\`\`「  نظام حظر الروابط  」\`\`\`\n\n*ما اقدر اطلعك*`)
     } else if (isUrl(m.text)) {
-    bvl = `\`\`\`「  *Antilink System*  」\`\`\`\n\nAdmin has sent a link so no action is taken.`
+    bvl = `\`\`\`「  *نظام حظر الروابط*  」\`\`\`\n\n*ما اقدر اطلع المشرفين*`
     if (isAdmins) return reply(bvl)
     if (m.key.fromMe) return reply(bvl)
     if (isCreator) return reply(bvl)
@@ -762,7 +762,7 @@ Akashi.sendMessage(from, {text:`\`\`\`「 'wa.me' PM link Detected! 」\`\`\`\n\
 if (antiVirtex) {
     if (budy.length > 3500) {
     reply(`*Caution!*\n\n`.repeat(300))
-    reply(`\`\`\`Virus Detected !!\`\`\`\n\nRevoving sender...`)
+    reply(`\`\`\`تم كشف فايروس !!\`\`\`\n\n...`)
     if (!isBotAdmins) return reply(mess.botAdmin)
     Akashi.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
     }
@@ -773,15 +773,15 @@ if (antiVirtex) {
         if (!isBotAdmins) return
         linkgce = await Akashi.groupInviteCode(from)
         if (budy.includes(`https://chat.whatsapp.com/${linkgce}`)) {
-        reply(`\`\`\`「  Antilink System  」\`\`\`\n\nNo action will be taken because you sent this group's link!`)
+        reply(`\`\`\`「  نظام حظر الروابط  」\`\`\`\n\n*ما اقدر اطلعك*`)
         } else if (isUrl(m.text)) {
-        bvl = `\`\`\`「  Antilink System  」\`\`\`\n\nAdmin has sent a group link so no action will be taken!`
+        bvl = `\`\`\`「  نظام حظر الروابط  」\`\`\`\n\n*ما اقدر اطلع المشرفين*`
         if (isAdmins) return reply(bvl)
         if (m.key.fromMe) return reply(bvl)
         if (isCreator) return reply(bvl)
         kice = m.sender
         await Akashi.groupParticipantsUpdate(m.chat, [kice], 'remove')
-        Akashi.sendMessage(from, {text:`\`\`\`「  Antilink System  」\`\`\`\n\n@${kice.split("@")[0]} Baka has been removed for sending link in this group!`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
+        Akashi.sendMessage(from, {text:`\`\`\`「  حظر روابط  」\`\`\`\n\n@${kice.split("@")[0]} برااا يلا انقلع!`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
         } else {
         }
         }
@@ -943,7 +943,7 @@ this.game = this.game ? this.game : {}
             else if (room.game.board === 511) isTie = true
             let arr = room.game.render().map(v => {
             return {
-            X: '❌',
+            X: '⚔️',
             O: '⭕',
             1: '1️⃣',
             2: '2️⃣',
@@ -965,8 +965,8 @@ this.game = this.game ? this.game : {}
     ${arr.slice(0, 3).join('')}
     ${arr.slice(3, 6).join('')}
     ${arr.slice(6).join('')}
-    ${isWin ? `@${winner.split('@')[0]} فائز!` : isTie ? `Game over` : `دورك ${['❌', '⭕'][1 * room.game._currentTurn]} (@${room.game.currentTurn.split('@')[0]})`}
-    ❌: @${room.game.playerX.split('@')[0]}
+    ${isWin ? `@${winner.split('@')[0]} فائز!` : isTie ? `Game over` : `دورك ${['⚔️', '⭕'][1 * room.game._currentTurn]} (@${room.game.currentTurn.split('@')[0]})`}
+    ⚔️: @${room.game.playerX.split('@')[0]}
     ⭕: @${room.game.playerO.split('@')[0]}
     اكتب *استسلام* لمغادرة اللعبة`
             if ((room.game._currentTurn ^ isSurrender ? room.x : room.o) !== m.chat)
@@ -1952,7 +1952,7 @@ await Akashi.sendMessage(m.chat, { delete: key })
  members.map(async adm => {
  mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
  })
- Akashi.sendMessage(from, {text: `\`\`\`「 Warning 」\`\`\`\n\nAntilink System Activated!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+ Akashi.sendMessage(from, {text: `\`\`\`「 تفعيل 」\`\`\`\n\n*تم تفعيل حظر الروابط*`, contextInfo: { mentionedJid : mems }}, {quoted:m})
  } else if (args[0] === "الغاء") {
  if (!AntiLink) return replay('تم الالغاء')
  let off = ntilink.indexOf(from)
@@ -2199,7 +2199,7 @@ await Akashi.sendMessage(m.chat, { delete: key })
    break
 
 
-   case 'antilinkallcvvvvvv': {
+   case 'حظر-جميع_روابط': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!m.isGroup) return replay(mess.grouponly)
@@ -2215,7 +2215,7 @@ await Akashi.sendMessage(m.chat, { delete: key })
  members.map(async adm => {
  mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
  })
- Akashi.sendMessage(from, {text: `\`\`\`「 Warning 」\`\`\`\n\nAntilink System Activated!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+ Akashi.sendMessage(from, {text: `\`\`\`「 تفعيل 」\`\`\`\n\nتم تفعيل!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
  } else if (args[0] === "off") {
  if (!AntiLinkAll) return replay('Already deactivated')
  let off = ntilinkall.indexOf(from)
@@ -2476,7 +2476,7 @@ if (isBanChat) return reply(mess.banChat)
     room.state = 'PLAYING'
     let arr = room.game.render().map(v => {
     return {
-    X: '❌',
+    X: '⚔️',
     O: '⭕',
     1: '1️⃣',
     2: '2️⃣',
@@ -2642,7 +2642,7 @@ let mentioned = participants.map(v => v.jid)
 
 
 
- case 'grouplink': case 'رابط': {
+ case 'groupddddlink': case 'رابط': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!m.isGroup) return replay(mess.grouponly)
@@ -3687,7 +3687,8 @@ if (!m.isGroup) return replay(`${mess.grouponly}`)
 let member = participants.map(u => u.id)
 let me = m.sender
 let jodoh = member[Math.floor(Math.random() * member.length)]
-let jawab = `توأم روحك :
+let jawab = `❣️ *توأم روحك ...* ❣️ \n
+✯────────────────────✯\n
 @${me.split('@')[0]} ❤️ @${jodoh.split('@')[0]}`
 let ments = [me, jodoh]
 let buttons = [
