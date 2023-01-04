@@ -2476,7 +2476,7 @@ if (isBanChat) return reply(mess.banChat)
     room.state = 'PLAYING'
     let arr = room.game.render().map(v => {
     return {
-    X: '⚔️',
+    X: '❌',
     O: '⭕',
     1: '1️⃣',
     2: '2️⃣',
@@ -3663,18 +3663,19 @@ Akashi.sendMessage(from, {text : `Case : ${kasus}\n\nDead : ${kematian}\n\nHeale
 break
 
 
-case 'صحبة': case 'صداقة': {
+case 'عشوائي': case 'قرعة': {
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
 if (!m.isGroup) return replay(`${mess.grouponly}`)
 let member = participants.map(u => u.id)
 let orang = member[Math.floor(Math.random() * member.length)]
 let jodoh = member[Math.floor(Math.random() * member.length)]
-let jawab = `@${orang.split('@')[0]} ❤️ @${jodoh.split('@')[0]}
-يديم صداقتكم💖...`
+let jawab = `@${orang.split('@')[0]} الفائز الاول\n 
+@${jodoh.split('@')[0]}الفائز التاني\n
+مبروك...`
 let menst = [orang, jodoh]
 let buttons = [
-{ buttonId: 'اتفق', buttonText: { displayText: 'اتفق' }, type: 1 }
+{ buttonId: 'مبروك', buttonText: { displayText: 'مبروك' }, type: 1 }
 ]
 await Akashi.sendButtonText(m.chat, buttons, jawab, Akashi.user.name, m, {mentions: menst})
 }
