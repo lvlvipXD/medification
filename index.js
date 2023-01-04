@@ -97,10 +97,10 @@ Akashi.ev.on('groups.update', async pea => {
         if (pea[0].announce == true) {
         //Akashi.send5ButImg(pea[0].id, `Grop has been *Closed!* Only *Admins* can send Messages!`, `Akashi Bot`, wm_fatih, [])
 
-        Akashi.sendMessage(m.chat, { image: wm_fatih, caption: 'Grop has been *Closed!* Only *Admins* can send Messages!'})
+        Akashi.sendMessage(m.chat, { image: wm_fatih, caption: '*تم قفل الجروب*'})
         } else if(pea[0].announce == false) {
        // Akashi.send5ButImg(pea[0].id, `Grop has been *Opened!* Now *Everyone* can send Messages!`, `Akashi Bot`, wm_fatih, [])
-       Akashi.sendMessage(m.chat, { image: wm_fatih, caption: 'Grop has been *Opened!* Now *Everyone* can send Messages!'})
+       Akashi.sendMessage(m.chat, { image: wm_fatih, caption: '*تم فتح الجروب*'})
         } else if (pea[0].restrict == true) {
         //Akashi.send5ButImg(pea[0].id, `Group Info modification has been *Restricted*, Now only *Admins* can edit Group Info !`, `Akashi Bot`, wm_fatih, [])
         Akashi.sendMessage(m.chat, { image: wm_fatih, caption: 'Group Info modification has been *Restricted*, Now only *Admins* can edit Group Info !'})
