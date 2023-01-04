@@ -5171,7 +5171,7 @@ const Akashiarrray= [
             ]
     
         
-const txt = `* اسم الشخصية؟*`
+const txt = `*اسم الشخصية؟*`
      
 const Akashiselection = Akashiarrray[Math.floor(Math.random()*Akashiarrray.length)]
         
