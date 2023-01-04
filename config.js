@@ -59,16 +59,16 @@ global.ntilink = []
 
 global.mess = {
     jobdone: 'تم ي حب',
-    useradmin: 'الامر فقط للمشرفين  *Baka*!',
+    useradmin: 'الامر فقط للمشرفين  *يا ذكي*!',
     botadmin: 'متخليني ادمن اول يا حب',
-    botowner: 'الامر خاص بالمالك, Baka!',
-    grouponly: 'This command is only made for *Groups*, Baka!',
-    privateonly: 'This command is only made for *Private Chat*, Baka!',
+    botowner: 'الامر خاص بالمالك, ياذكي لا تعيدها!',
+    grouponly: 'خاص بالمجموعات',
+    privateonly: 'خاص',
     botonly: 'Only the *Bot itself* can use this command!',
     waiting: 'تواني...',
-    nolink: 'متحط الرابط كمان , بااكا',
+    nolink: 'متحط الرابط كمان , ',
     error: 'An error occurd!',
-    banned: '*تم حظرك مؤقتا من استخدام الاوامر*',
+    banned: '*تم حظرك  من استخدام الاوامر*',
     bangc: '*الجروب محظور من استخدام الاوامر*',
     nonsfw: 'عيب كدا يااض اتلم ولك'
     
