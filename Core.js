@@ -3529,7 +3529,7 @@ case 'مقطع': case 'play333': {
 
 
 
-case 'تطقيمات':  case 'تطقيم': {
+case 'تطقيميبسيبات':  case 'تطقيييييييييم': {
 if (isBan) return reply(mess.banned)
 if (isBanChat) return reply(mess.bangc)
          reply(mess.waiting)
@@ -4996,7 +4996,7 @@ case 'اوامر':{
 •∆ البحث عن صور عشوائية 
 •∆ اكتب اسم بالانجليزي عشان ميجيب العيد 
 
-•∆ -تطقيم
+•∆ -تطقيم (ملغي)
 •∆ جلب تطقيمات 
  
 •∆ -بنتر
