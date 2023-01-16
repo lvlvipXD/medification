@@ -91,7 +91,7 @@ Akashi.ev.on('groups.update', async pea => {
         try {
         ppgc = await Akashi.profilePictureUrl(pea[0].id, 'image')
         } catch {
-        ppgc = 'https://wallpapercave.com/wp/wp10524580.jpg'
+        ppgc = 'https://wallpapercave.com/wp/wp1897011.jpg'
         }
         let wm_fatih = { url : ppgc }
         if (pea[0].announce == true) {
@@ -133,13 +133,13 @@ Akashi.ev.on('group-participants.update', async (anu) => {
                 try {
                     ppuser = await Akashi.profilePictureUrl(num, 'image')
                 } catch {
-                    ppuser = 'https://wallpapercave.com/wp/wp11599837.jpg'
+                    ppuser = 'https://wallpapercave.com/wp/wp1897011.jpg'
                 }
 
                 try {
                     ppgroup = await Akashi.profilePictureUrl(anu.id, 'image')
                 } catch {
-                    ppgroup = 'https://wallpapercave.com/wp/wp11599837.jpg'
+                    ppgroup = 'https://wallpapercave.com/wp/wp1897011.jpg'
                 }
 
                 let targetname = await Akashi.getName(num)
@@ -165,16 +165,14 @@ ${metadata.desc}
     headerType: 4,
     }
 Akashi.sendMessage(anu.id, buttonMessage)
-                } else if (anu.action == 'remove') {
+                } else if (anu.action == 'Rrremove') {
                 	let WAuserName = num
                     A17text = `
  مع السلامة يا الطيب , @${WAuserName.split("@")[0]},
-
-
 `
 
     let buttonMessage = {
-	image:await getBuffer(ppuser),
+	image:await getBuffer(ppgroup),
     mentions: [num],
     caption: A17text,
     footer: `${global.BotName}`,
