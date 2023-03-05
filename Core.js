@@ -3032,6 +3032,8 @@ let buttons = [
 ]
 let buttonMessage = {
 image: { url: images },
+	
+caption: ``,
 
 footer: `${global.BotName}`,
 buttons: buttons,
