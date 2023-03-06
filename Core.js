@@ -5209,7 +5209,7 @@ case 'ادد':{
         ? m.quoted.text
         : m.text;
       const SpeakEngine = require("google-tts-api"); 
-      const texttospeechurl = SpeakEngine.getAudioUrl(texttosay, {lang: "en", slow: false, host: "https://translate.google.com",});
+      const texttospeechurl = SpeakEngine.getAudioUrl(texttosay, {lang: "ja", slow: false, host: "https://translate.google.com",});
       Akashi.sendMessage(m.chat,{audio: {url: texttospeechurl,},mimetype: "audio/mpeg",fileName: `AkashiSpeechEngine.mp3`,},{quoted: m,});
     }
     break;
