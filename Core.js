@@ -5197,7 +5197,7 @@ case 'ادد':{
  break
 
 
- case "انطق":{
+ case "انطق_ياباني":{
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
 
@@ -5211,6 +5211,22 @@ case 'ادد':{
       const SpeakEngine = require("google-tts-api"); 
       const texttospeechurl = SpeakEngine.getAudioUrl(texttosay, {lang: "ja", slow: false, host: "https://translate.google.com",});
       Akashi.sendMessage(m.chat,{audio: {url: texttospeechurl,},mimetype: "audio/mpeg",fileName: `AkashiSpeechEngine.mp3`,},{quoted: m,});
+    }
+    break;
+ case "انطق_انجليزي":{
+    if (isBan) return reply(mess.banned)	 			
+    if (isBanChat) return reply(mess.bangc)
+
+    if (!args[0]) return reply("اعطيني كتابه لانطقها!")
+      
+      let texttosay = text
+        ? text
+        : m.quoted && m.quoted.text
+        ? m.quoted.text
+        : m.text;
+      const SpeakEngineee = require("google-tts-api"); 
+      const texttospeechurlll = SpeakEngineee.getAudioUrl(texttosay, {lang: "en", slow: false, host: "https://translate.google.com",});
+      Akashi.sendMessage(m.chat,{audio: {url: texttospeechurlll,},mimetype: "audio/mpeg",fileName: `AkashiSpeechEngine.mp3`,},{quoted: m,});
     }
     break;
  
@@ -5230,7 +5246,39 @@ case 'ادد':{
       Akashi.sendMessage(m.chat,{audio: {url: texttospeechurll,},mimetype: "audio/mpeg",fileName: `AkashiSpeechEngine.mp3`,},{quoted: m,});
     }
     break;
+  case "انطق_هندي":{
+    if (isBan) return reply(mess.banned)	 			
+    if (isBanChat) return reply(mess.bangc)
 
+    if (!args[0]) return reply("اعطيني كتابه لانطقها!")
+      
+      let texttosay = text
+        ? text
+        : m.quoted && m.quoted.text
+        ? m.quoted.text
+        : m.text;
+      const SpeakEngineeee = require("google-tts-api"); 
+      const texttospeechurllll = SpeakEngineeee.getAudioUrl(texttosay, {lang: "hi", slow: false, host: "https://translate.google.com",});
+      Akashi.sendMessage(m.chat,{audio: {url: texttospeechurllll,},mimetype: "audio/mpeg",fileName: `AkashiSpeechEngine.mp3`,},{quoted: m,});
+    }
+    break;
+  
+   case "انطق_صيني":{
+    if (isBan) return reply(mess.banned)	 			
+    if (isBanChat) return reply(mess.bangc)
+
+    if (!args[0]) return reply("اعطيني كتابه لانطقها!")
+      
+      let texttosay = text
+        ? text
+        : m.quoted && m.quoted.text
+        ? m.quoted.text
+        : m.text;
+      const SpeakEngineeeee = require("google-tts-api"); 
+      const texttospeechurlllll = SpeakEngineeeee.getAudioUrl(texttosay, {lang: "zh", slow: false, host: "https://translate.google.com",});
+      Akashi.sendMessage(m.chat,{audio: {url: texttospeechurlllll,},mimetype: "audio/mpeg",fileName: `AkashiSpeechEngine.mp3`,},{quoted: m,});
+    }
+    break;
 
     case 'qيبسيبr': case 'qrcيسبسيبسيبode':
         if (isBan) return reply(mess.banned)	 			
