@@ -5216,6 +5216,22 @@ case 'ادد':{
       Akashi.sendMessage(m.chat,{audio: {url: texttospeechurl,},mimetype: "audio/mpeg",fileName: `AkashiSpeechEngine.mp3`,},{quoted: m,});
     }
     break;
+ case "انطق_كوري":{
+    if (isBan) return reply(mess.banned)	 			
+    if (isBanChat) return reply(mess.bangc)
+
+    if (!args[0]) return reply("اعطيني كتابه لانطقها!")
+      
+      let texttosay = text
+        ? text
+        : m.quoted && m.quoted.text
+        ? m.quoted.text
+        : m.text;
+      const SpeakEngines = require("google-tts-api"); 
+      const texttospeechurls = SpeakEngines.getAudioUrl(texttosay, {lang: "ko", slow: false, host: "https://translate.google.com",});
+      Akashi.sendMessage(m.chat,{audio: {url: texttospeechurls,},mimetype: "audio/mpeg",fileName: `AkashiSpeechEngine.mp3`,},{quoted: m,});
+    }
+    break;		
  case "انطق_انجليزي":{
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
