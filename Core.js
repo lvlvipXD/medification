@@ -3033,8 +3033,10 @@ let buttons = [
 let buttonMessage = {
 image: { url: images },
 	
-caption: ``,
+caption: `「 _النتائج_ 」
 
+_Search Term_ : ${text}
+_Media Url_ : ${images}`,
 footer: `${global.BotName}`,
 buttons: buttons,
 headerType: 4,
@@ -3677,7 +3679,7 @@ await Akashi.sendButtonText(m.chat, buttons, jawab, Akashi.user.name, m, {mentio
 }
 break
 
-case 'توهتمنتمنأمي': {
+case 'سولميت': {
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
 if (!m.isGroup) return replay(`${mess.grouponly}`)
