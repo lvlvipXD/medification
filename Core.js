@@ -3766,7 +3766,7 @@ case 'شخصيتك':
     if (isBanChat) return reply(mess.bangc)
 					if (!text) return replay(`مثال : شخصيتك @منشن لشخص`)
 					const Akashittttzaa =['محنك','بارد','تافه الف','فشل التحليل','شقد فيك سماجة','محبوب','ورع','محبوب','نااعم','تراك ممل','يقولون عنك ناعم . صدق؟','اهبل','كلاون ههه','سيمب','خروف','صايع','عصبي','غلبان','عميق','مسوي كاريزما','حمار','مشكلجي','سريع الغضب','ما عندك شخصية','هادئ','احسك طيب','غبي','مثقف','دز مفيش','رايق','كيووط','مهضوم']
-					const takyz = Akashittttzaa[Math.floor(Math.random() * Akashittttzaa.length)]
+					const takyzq = Akashittttzaa[Math.floor(Math.random() * Akashittttzaa.length)]
 					Akashi.sendMessage(from, { text: `جاري تحليل شخصية : ${q}\nالجواب : *${takyz}*` }, { quoted: m })  
 	                              break
 					                 
